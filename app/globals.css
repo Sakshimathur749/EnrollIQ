@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-plus-jakarta-sans), "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Hide scrollbar for desktop version */
+@media (min-width: 1024px) {
+
+  html,
+  body {
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+  }
+
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari and Opera */
+    width: 0;
+    height: 0;
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media (min-width: 1024px) {
+
+  html,
+  body {
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+  }
+
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari and Opera */
+    width: 0;
+    height: 0;
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

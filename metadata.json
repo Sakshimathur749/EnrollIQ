@@ -1,0 +1,6 @@
+{
+  "name": "EnrollI CRM",
+  "description": "Official login and onboarding authentication portal for EnrollI Education CRM, featuring interactive enrollment insights carousel, social sign-in, and account registration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
