@@ -1,0 +1,16 @@
+/* app/login/login.module.css */
+.loginContainer {
+    height: 100vh !important;
+    overflow-y: auto !important;
+    scrollbar-width: none !important;
+    /* Firefox */
+    -ms-overflow-style: none !important;
+    /* IE and Edge */
+}
+
+.loginContainer::-webkit-scrollbar {
+    display: none !important;
+    /* Chrome, Safari, Opera */
+    width: 0 !important;
+    height: 0 !important;
+}

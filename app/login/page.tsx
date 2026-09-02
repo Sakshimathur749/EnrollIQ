@@ -60,7 +60,7 @@ export default function LoginPage() {
   return (
     <main
       id="enrolli-auth-page"
-      className="min-h-screen w-full bg-slate-50 flex flex-col lg:flex-row lg:h-screen font-sans text-slate-800 antialiased selection:bg-blue-100 selection:text-blue-900 no-scrollbar overflow-x-hidden"
+      className="min-h-screen w-full bg-slate-50 flex flex-col lg:flex-row lg:h-screen font-sans text-slate-800 antialiased selection:bg-blue-100 selection:text-blue-900 loginContainer overflow-x-hidden"
     >
       {/* ------------------------------------------------------------- */}
       {/* LEFT / TOP COLUMN: Feature & Insights Carousel (Top on Mobile) */}
@@ -82,7 +82,7 @@ export default function LoginPage() {
       <section
         id="auth-column"
         aria-label="User Authentication and Registration"
-        className="w-full lg:w-[46%] xl:w-[44%] order-2 lg:order-2 bg-white flex flex-col justify-between p-6 sm:p-8 lg:p-10 xl:p-12 min-h-[640px] lg:h-full lg:overflow-y-auto no-scrollbar shadow-xl lg:shadow-none z-20"
+        className="w-full lg:w-[46%] xl:w-[44%] order-2 lg:order-2 bg-white flex flex-col justify-between p-6 sm:p-8 lg:p-10 xl:p-12 min-h-[640px] lg:h-full lg:overflow-y-auto loginContainer shadow-xl lg:shadow-none z-20"
       >
         {/* Top Floating View Mode Switcher Badge */}
         <div className="flex items-center justify-between mb-4">
