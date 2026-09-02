@@ -1,22 +1,22 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect, useRef } from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { 
-  ChevronDown, 
-  Box, 
-  UserCheck, 
-  BarChart2, 
-  Settings, 
-  Menu, 
+import React, { useState, useEffect, useRef } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import {
+  ChevronDown,
+  Box,
+  UserCheck,
+  BarChart2,
+  Settings,
+  Menu,
   X,
   BookOpen,
   FileText,
   Lightbulb,
   Sparkles,
-  ArrowRight
-} from 'lucide-react';
+  ArrowRight,
+} from "lucide-react";
 
 interface EduNavbarProps {
   onOpenDemo?: () => void;
@@ -38,22 +38,28 @@ export function EduNavbar({ onOpenDemo }: EduNavbarProps) {
     const handleScroll = () => {
       setScrolled(window.scrollY > 15);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   // Close dropdowns on outside click
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (productDropdownRef.current && !productDropdownRef.current.contains(event.target as Node)) {
+      if (
+        productDropdownRef.current &&
+        !productDropdownRef.current.contains(event.target as Node)
+      ) {
         setProductDropdownOpen(false);
       }
-      if (resourcesDropdownRef.current && !resourcesDropdownRef.current.contains(event.target as Node)) {
+      if (
+        resourcesDropdownRef.current &&
+        !resourcesDropdownRef.current.contains(event.target as Node)
+      ) {
         setResourcesDropdownOpen(false);
       }
     }
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   const handleProductEnter = () => {
@@ -61,7 +67,10 @@ export function EduNavbar({ onOpenDemo }: EduNavbarProps) {
     setProductDropdownOpen(true);
   };
   const handleProductLeave = () => {
-    productTimeoutRef.current = setTimeout(() => setProductDropdownOpen(false), 180);
+    productTimeoutRef.current = setTimeout(
+      () => setProductDropdownOpen(false),
+      180,
+    );
   };
 
   const handleResourcesEnter = () => {
@@ -69,87 +78,93 @@ export function EduNavbar({ onOpenDemo }: EduNavbarProps) {
     setResourcesDropdownOpen(true);
   };
   const handleResourcesLeave = () => {
-    resourcesTimeoutRef.current = setTimeout(() => setResourcesDropdownOpen(false), 180);
+    resourcesTimeoutRef.current = setTimeout(
+      () => setResourcesDropdownOpen(false),
+      180,
+    );
   };
 
-  const isFeaturesActive = pathname === '/features';
-  const isAboutActive = pathname === '/solutions';
+  const isFeaturesActive = pathname === "/service";
+  const isAboutActive = pathname === "/about";
 
   const productItems = [
     {
-      title: 'CRM Suite',
-      subtitle: 'Manage leads, deals & admissions',
-      href: '/features',
+      title: "CRM Suite",
+      subtitle: "Manage leads, deals & admissions",
+      href: "/features",
       icon: Box,
     },
     {
-      title: 'Student Portal',
-      subtitle: 'Everything for student engagement',
-      href: '/counselors',
+      title: "Student Portal",
+      subtitle: "Everything for student engagement",
+      href: "/counselors",
       icon: UserCheck,
     },
     {
-      title: 'Analytics & Attribution',
-      subtitle: 'Real-time campaign insights',
-      href: '/attribution',
+      title: "Analytics & Attribution",
+      subtitle: "Real-time campaign insights",
+      href: "/attribution",
       icon: BarChart2,
     },
     {
-      title: 'Integrations',
-      subtitle: '100+ native connectors',
-      href: '/integrations',
+      title: "Integrations",
+      subtitle: "100+ native connectors",
+      href: "/integrations",
       icon: Settings,
     },
   ];
 
   const resourceItems = [
     {
-      title: 'Case Studies',
-      subtitle: 'How 500+ institutes scale',
-      href: '/solutions',
+      title: "Case Studies",
+      subtitle: "How 500+ institutes scale",
+      href: "/solutions",
       icon: Sparkles,
     },
     {
-      title: 'Playbooks & Guides',
-      subtitle: 'Best practices for admissions',
-      href: '/admission-process',
+      title: "Playbooks & Guides",
+      subtitle: "Best practices for admissions",
+      href: "/admission-process",
       icon: BookOpen,
     },
     {
-      title: 'API & Documentation',
-      subtitle: 'Developer guides and webhooks',
-      href: '/integrations',
+      title: "API & Documentation",
+      subtitle: "Developer guides and webhooks",
+      href: "/integrations",
       icon: FileText,
     },
     {
-      title: 'Growth Insights',
-      subtitle: 'Latest EdTech CRM trends',
-      href: '/solutions',
+      title: "Growth Insights",
+      subtitle: "Latest EdTech CRM trends",
+      href: "/solutions",
       icon: Lightbulb,
     },
   ];
 
   return (
-    <header 
+    <header
       className={`sticky top-0 z-50 transition-all duration-200 ${
-        scrolled 
-          ? 'bg-white/95 backdrop-blur-md shadow-xs border-b border-slate-100 py-3.5' 
-          : 'bg-transparent py-4'
+        scrolled
+          ? "bg-white/95 backdrop-blur-md shadow-xs border-b border-slate-100 py-3.5"
+          : "bg-transparent py-4"
       }`}
       id="main-navbar"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          
           {/* 1. Left Logo: EnrollIQ (with 3-tiered pill icon) */}
-          <Link href="/" className="flex items-center gap-3 group shrink-0" id="nav-brand-logo">
+          <Link
+            href="/"
+            className="flex items-center gap-3 group shrink-0"
+            id="nav-brand-logo"
+          >
             {/* Custom 3-bar funnel icon matching the reference image */}
             <div className="w-8 h-8 flex flex-col justify-center gap-1.5 group-hover:scale-105 transition-transform">
               <div className="w-7 h-1.5 bg-[#0F172A] rounded-full" />
               <div className="w-5 h-1.5 bg-[#0F172A] rounded-full" />
               <div className="w-3.5 h-1.5 bg-[#4F46E5] rounded-full" />
             </div>
-            
+
             <div className="font-heading text-2xl tracking-tight leading-none">
               <span className="font-extrabold text-[#0F172A]">Enroll</span>
               <span className="font-extrabold text-[#4F46E5]">IQ</span>
@@ -158,13 +173,14 @@ export function EduNavbar({ onOpenDemo }: EduNavbarProps) {
 
           {/* 2. Center Navigation Links: Home, About, Product ▾, Contact */}
           <nav className="hidden md:flex items-center gap-7 lg:gap-9">
-            
             {/* Home */}
             <div className="relative py-1">
               <Link
                 href="/"
                 className={`text-[14px] lg:text-[15px] font-medium transition-colors ${
-                  pathname === '/' ? 'text-[#4F46E5] font-semibold' : 'text-slate-700 hover:text-[#4F46E5]'
+                  pathname === "/"
+                    ? "text-[#4F46E5] font-semibold"
+                    : "text-slate-700 hover:text-[#4F46E5]"
                 }`}
                 id="nav-home-link"
               >
@@ -175,9 +191,11 @@ export function EduNavbar({ onOpenDemo }: EduNavbarProps) {
             {/* About */}
             <div className="relative py-1">
               <Link
-                href="/solutions"
+                href="/about"
                 className={`text-[14px] lg:text-[15px] font-medium transition-colors ${
-                  pathname === '/solutions' || pathname === '/about' ? 'text-[#4F46E5] font-semibold' : 'text-slate-700 hover:text-[#4F46E5]'
+                  pathname === "/about" || pathname === "/about"
+                    ? "text-[#4F46E5] font-semibold"
+                    : "text-slate-700 hover:text-[#4F46E5]"
                 }`}
                 id="nav-about-link"
               >
@@ -186,28 +204,32 @@ export function EduNavbar({ onOpenDemo }: EduNavbarProps) {
             </div>
 
             {/* Product with interactive Dropdown */}
-            <div 
+            <div
               className="relative py-1"
               ref={productDropdownRef}
               onMouseEnter={handleProductEnter}
               onMouseLeave={handleProductLeave}
             >
-              <button
-                type="button"
-                onClick={() => setProductDropdownOpen(!productDropdownOpen)}
+              <a
+                href="/services"
+                // onClick={() => setProductDropdownOpen(!productDropdownOpen)}
                 className={`text-[14px] lg:text-[15px] font-medium transition-colors flex items-center gap-1 cursor-pointer ${
-                  productDropdownOpen || pathname === '/features' ? 'text-[#4F46E5] font-semibold' : 'text-slate-700 hover:text-[#4F46E5]'
+                  productDropdownOpen || pathname === "/services"
+                    ? "text-[#4F46E5] font-semibold"
+                    : "text-slate-700 hover:text-[#4F46E5]"
                 }`}
                 aria-expanded={productDropdownOpen}
                 id="product-menu-button"
               >
-                <span>Product</span>
-                <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${productDropdownOpen ? 'rotate-180 text-[#4F46E5]' : 'text-slate-500'}`} />
-              </button>
+                <span>Service</span>
+                {/* <ChevronDown
+                  className={`w-3.5 h-3.5 transition-transform duration-200 ${productDropdownOpen ? "rotate-180 text-[#4F46E5]" : "text-slate-500"}`}
+                /> */}
+              </a>
 
               {/* Product Popover Dropdown Card */}
-              {productDropdownOpen && (
-                <div 
+              {/* {productDropdownOpen && (
+                <div
                   className="absolute top-full left-1/2 -translate-x-1/2 pt-3 z-50 w-72 sm:w-80 animate-in fade-in zoom-in-95 duration-150"
                   id="product-dropdown-card"
                 >
@@ -239,7 +261,7 @@ export function EduNavbar({ onOpenDemo }: EduNavbarProps) {
                     })}
                   </div>
                 </div>
-              )}
+              )} */}
             </div>
 
             {/* Contact */}
@@ -247,14 +269,15 @@ export function EduNavbar({ onOpenDemo }: EduNavbarProps) {
               <Link
                 href="/contact"
                 className={`text-[14px] lg:text-[15px] font-medium transition-colors ${
-                  pathname === '/contact' ? 'text-[#4F46E5] font-semibold' : 'text-slate-700 hover:text-[#4F46E5]'
+                  pathname === "/contact"
+                    ? "text-[#4F46E5] font-semibold"
+                    : "text-slate-700 hover:text-[#4F46E5]"
                 }`}
                 id="nav-contact-link"
               >
                 Contact
               </Link>
             </div>
-
           </nav>
 
           {/* 3. Right Action: Login Button */}
@@ -285,22 +308,26 @@ export function EduNavbar({ onOpenDemo }: EduNavbarProps) {
               aria-label="Toggle mobile navigation menu"
               id="mobile-menu-toggle"
             >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6 text-slate-800" />}
+              {mobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6 text-slate-800" />
+              )}
             </button>
           </div>
-
         </div>
 
         {/* Mobile Navigation Drawer */}
         {mobileMenuOpen && (
           <div className="md:hidden mt-3 pt-3 pb-5 border-t border-slate-100 space-y-3 animate-in fade-in slide-in-from-top-2 duration-200 bg-white">
-            
             <div className="grid grid-cols-1 gap-1">
               <Link
                 href="/"
                 onClick={() => setMobileMenuOpen(false)}
                 className={`px-3 py-2 rounded-xl text-sm font-semibold ${
-                  pathname === '/' ? 'bg-indigo-50 text-[#4F46E5]' : 'text-slate-700 hover:bg-slate-50'
+                  pathname === "/"
+                    ? "bg-indigo-50 text-[#4F46E5]"
+                    : "text-slate-700 hover:bg-slate-50"
                 }`}
               >
                 Home
@@ -310,7 +337,9 @@ export function EduNavbar({ onOpenDemo }: EduNavbarProps) {
                 href="/solutions"
                 onClick={() => setMobileMenuOpen(false)}
                 className={`px-3 py-2 rounded-xl text-sm font-semibold ${
-                  pathname === '/solutions' || pathname === '/about' ? 'bg-indigo-50 text-[#4F46E5]' : 'text-slate-700 hover:bg-slate-50'
+                  pathname === "/solutions" || pathname === "/about"
+                    ? "bg-indigo-50 text-[#4F46E5]"
+                    : "text-slate-700 hover:bg-slate-50"
                 }`}
               >
                 About
@@ -334,8 +363,12 @@ export function EduNavbar({ onOpenDemo }: EduNavbarProps) {
                       <Icon className="w-4 h-4" />
                     </div>
                     <div>
-                      <div className="text-xs font-bold text-slate-900">{item.title}</div>
-                      <div className="text-[11px] text-slate-500">{item.subtitle}</div>
+                      <div className="text-xs font-bold text-slate-900">
+                        {item.title}
+                      </div>
+                      <div className="text-[11px] text-slate-500">
+                        {item.subtitle}
+                      </div>
                     </div>
                   </Link>
                 );
@@ -345,7 +378,9 @@ export function EduNavbar({ onOpenDemo }: EduNavbarProps) {
                 href="/contact"
                 onClick={() => setMobileMenuOpen(false)}
                 className={`px-3 py-2 rounded-xl text-sm font-semibold ${
-                  pathname === '/contact' ? 'bg-indigo-50 text-[#4F46E5]' : 'text-slate-700 hover:bg-slate-50'
+                  pathname === "/contact"
+                    ? "bg-indigo-50 text-[#4F46E5]"
+                    : "text-slate-700 hover:bg-slate-50"
                 }`}
               >
                 Contact
@@ -365,10 +400,7 @@ export function EduNavbar({ onOpenDemo }: EduNavbarProps) {
             </div>
           </div>
         )}
-
       </div>
     </header>
   );
 }
-
-

@@ -1,15 +1,15 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import Image from 'next/image';
-import { ArrowRight, Users, Globe2, Award } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { ArrowRight, Users, Globe2, Award } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const highlights = [
-  { icon: Users, value: '150+', label: 'Partner Institutions' },
-  { icon: Globe2, value: '12', label: 'States Covered' },
-  { icon: Award, value: '2021', label: 'Founded' },
+  { icon: Users, value: "150+", label: "Partner Institutions" },
+  { icon: Globe2, value: "12", label: "States Covered" },
+  { icon: Award, value: "2021", label: "Founded" },
 ];
 
 export default function AboutHeroSection() {
@@ -45,7 +45,8 @@ export default function AboutHeroSection() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-5xl font-extrabold tracking-tight text-foreground sm:text-6xl leading-[1.08] mb-6"
             >
-              We&apos;re building the <span className="gradient-text">future of admissions</span>
+              We&apos;re building the{" "}
+              <span className="gradient-text">future of admissions</span>
             </motion.h1>
 
             <motion.p
@@ -54,9 +55,10 @@ export default function AboutHeroSection() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-lg leading-8 text-muted-foreground mb-8 max-w-xl"
             >
-              EnrollIQ was born from a simple observation: India&apos;s best educational institutions were losing great
-              students to broken, fragmented admissions processes. We built the platform we wish had existed —
-              intelligent, unified, and purpose-built for education.
+              EnrollIQ was born from a simple observation: India&apos;s best
+              educational institutions were losing great students to broken,
+              fragmented admissions processes. We built the platform we wish had
+              existed — intelligent, unified, and purpose-built for education.
             </motion.p>
 
             <motion.div
@@ -93,8 +95,12 @@ export default function AboutHeroSection() {
                     <Icon className="h-4 w-4 text-primary" />
                   </div>
                   <div>
-                    <p className="text-lg font-bold text-foreground leading-none">{value}</p>
-                    <p className="text-xs text-muted-foreground mt-0.5">{label}</p>
+                    <p className="text-lg font-bold text-foreground leading-none">
+                      {value}
+                    </p>
+                    <p className="text-xs text-muted-foreground mt-0.5">
+                      {label}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -105,7 +111,11 @@ export default function AboutHeroSection() {
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+            transition={{
+              duration: 0.8,
+              delay: 0.15,
+              ease: [0.22, 1, 0.36, 1],
+            }}
             className="relative"
           >
             <div className="grid grid-cols-2 gap-4">
@@ -158,9 +168,13 @@ export default function AboutHeroSection() {
               transition={{ delay: 0.8, duration: 0.4 }}
               className="absolute -bottom-4 -left-4 glass-card rounded-2xl px-5 py-4 shadow-xl"
             >
-              <p className="text-xs text-muted-foreground">This year&apos;s enrolments</p>
+              <p className="text-xs text-muted-foreground">
+                This year&apos;s enrolments
+              </p>
               <p className="text-2xl font-extrabold text-foreground">50,000+</p>
-              <p className="text-xs text-emerald-600 font-semibold">↑ 40% vs last year</p>
+              <p className="text-xs text-emerald-600 font-semibold">
+                ↑ 40% vs last year
+              </p>
             </motion.div>
           </motion.div>
         </div>

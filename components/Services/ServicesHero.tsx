@@ -1,19 +1,19 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { ArrowRight, Layers } from 'lucide-react';
-import Link from 'next/link';
+import { motion } from "framer-motion";
+import { ArrowRight, Layers } from "lucide-react";
+import Link from "next/link";
 
 const modules = [
-  'Lead Management',
-  'Counsellor Workspace',
-  'Omnichannel Inbox',
-  'AI Scoring',
-  'Fee Collection',
-  'Application Portal',
-  'Analytics',
-  'Document Management',
-  'Integrations',
+  "Lead Management",
+  "Counsellor Workspace",
+  "Omnichannel Inbox",
+  "AI Scoring",
+  "Fee Collection",
+  "Application Portal",
+  "Analytics",
+  "Document Management",
+  "Integrations",
 ];
 
 export default function ServicesHero() {
@@ -27,7 +27,7 @@ export default function ServicesHero() {
           className="absolute inset-0 opacity-[0.05]"
           style={{
             backgroundImage: `radial-gradient(circle, rgba(255,255,255,0.6) 1px, transparent 1px)`,
-            backgroundSize: '40px 40px',
+            backgroundSize: "40px 40px",
           }}
         />
       </div>
@@ -60,8 +60,10 @@ export default function ServicesHero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-lg leading-8 text-white/55 mb-8 max-w-2xl mx-auto"
         >
-          From the first inquiry to the confirmed enrolment — EnrollIQ covers every step of the admissions journey with
-          purpose-built CRM tools that are faster, smarter, and more connected than anything else on the market.
+          From the first inquiry to the confirmed enrolment — EnrollIQ covers
+          every step of the admissions journey with purpose-built CRM tools that
+          are faster, smarter, and more connected than anything else on the
+          market.
         </motion.p>
 
         <motion.div
