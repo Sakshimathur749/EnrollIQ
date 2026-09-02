@@ -334,20 +334,30 @@ export function EduNavbar({ onOpenDemo }: EduNavbarProps) {
               </Link>
 
               <Link
-                href="/solutions"
+                href="/about"
                 onClick={() => setMobileMenuOpen(false)}
                 className={`px-3 py-2 rounded-xl text-sm font-semibold ${
-                  pathname === "/solutions" || pathname === "/about"
+                  pathname === "/about"
                     ? "bg-indigo-50 text-[#4F46E5]"
                     : "text-slate-700 hover:bg-slate-50"
                 }`}
               >
                 About
               </Link>
-
+              <Link
+                href="/services"
+                onClick={() => setMobileMenuOpen(false)}
+                className={`px-3 py-2 rounded-xl text-sm font-semibold ${
+                  pathname === "/services"
+                    ? "bg-indigo-50 text-[#4F46E5]"
+                    : "text-slate-700 hover:bg-slate-50"
+                }`}
+              >
+                Service
+              </Link>
               {/* Product items in mobile menu */}
-              <div className="pt-2 pb-1 px-3 text-xs font-bold text-slate-400 uppercase tracking-wider">
-                Product Solutions
+              {/* <div className="pt-2 pb-1 px-3 text-xs font-bold text-slate-400 uppercase tracking-wider">
+                Service
               </div>
 
               {productItems.map((item) => {
@@ -372,7 +382,7 @@ export function EduNavbar({ onOpenDemo }: EduNavbarProps) {
                     </div>
                   </Link>
                 );
-              })}
+              })} */}
 
               <Link
                 href="/contact"
