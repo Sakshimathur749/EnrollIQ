@@ -11,7 +11,7 @@ interface EduFooterProps {
 
 export function EduFooter({ onOpenDemo }: EduFooterProps) {
   const quickLinks = [
-    { name: "About", href: "/solutions" },
+    { name: "About", href: "/about" },
     { name: "Service", href: "/services" },
     { name: "Contact", href: "/contact" },
   ];
