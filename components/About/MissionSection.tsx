@@ -1,35 +1,35 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { Target, Eye, Heart } from 'lucide-react';
+import { motion } from "framer-motion";
+import { Target, Eye, Heart } from "lucide-react";
 
 const pillars = [
   {
     icon: Target,
-    title: 'Our Mission',
-    body: 'To eliminate friction from the student enrolment journey — empowering every institution to admit more deserving students through intelligent, data-driven processes.',
-    color: 'bg-violet-500/10 text-violet-600 border-violet-200',
-    glow: 'from-violet-500/5',
+    title: "Our Mission",
+    body: "To eliminate lead leakage and delay in student admissions by providing educational institutions with a unified, automated, and intelligent enrollment CRM.",
+    color: "bg-[#4F46E5]/10 text-[#4F46E5] border-indigo-200",
+    glow: "from-indigo-500/5",
   },
   {
     icon: Eye,
-    title: 'Our Vision',
-    body: 'A world where no talented student misses their dream institution because of slow response times, lost leads, or fragmented communication.',
-    color: 'bg-blue-500/10 text-blue-600 border-blue-200',
-    glow: 'from-blue-500/5',
+    title: "Our Vision",
+    body: "To become the standard admission operating system for modern educational institutions — driving instant counselor-student connections through automated lead distribution.",
+    color: "bg-blue-500/10 text-blue-600 border-blue-200",
+    glow: "from-blue-500/5",
   },
   {
     icon: Heart,
-    title: 'Our Values',
-    body: 'Student-first thinking, radical transparency with our partners, relentless iteration on product quality, and deep empathy for the counsellors who work tirelessly on the front lines.',
-    color: 'bg-emerald-500/10 text-emerald-600 border-emerald-200',
-    glow: 'from-emerald-500/5',
+    title: "Our Values",
+    body: "Counselor-first simplicity, 100% lead attribution transparency for marketing teams, continuous feature delivery, and scalable data security.",
+    color: "bg-emerald-500/10 text-emerald-600 border-emerald-200",
+    glow: "from-emerald-500/5",
   },
 ];
 
 export default function MissionSection() {
   return (
-    <section className="bg-muted/30 py-12 sm:py-24">
+    <section className="bg-slate-50/70 py-16 sm:py-24 border-y border-slate-200/80">
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         {/* Header */}
         <motion.div
@@ -37,16 +37,22 @@ export default function MissionSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.55 }}
-          className="mx-auto mb-16 max-w-2xl text-center"
+          className="mx-auto mb-16 max-w-2xl text-center space-y-3"
         >
-          <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-3">Purpose</p>
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">Why EnrollIQ exists</h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            We&apos;re not just building software. We&apos;re reshaping how education reaches students.
+          <p className="text-xs font-bold uppercase tracking-widest text-[#4F46E5]">
+            Purpose Driven
+          </p>
+          <h2 className="text-3xl font-heading font-black tracking-tight text-[#0F172A] sm:text-4xl">
+            Why EnrollIQ Exists
+          </h2>
+          <p className="text-base text-slate-600 leading-relaxed">
+            We are building the dedicated admission technology stack that
+            bridges the gap between marketing ad spend and final student
+            enrollments.
           </p>
         </motion.div>
 
-        {/* Cards */}
+        {/* Pillars Cards */}
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {pillars.map(({ icon: Icon, title, body, color, glow }, i) => (
             <motion.div
@@ -55,58 +61,97 @@ export default function MissionSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.55, delay: i * 0.12 }}
-              className={`relative overflow-hidden rounded-2xl border bg-card p-8 shadow-sm`}
+              className={`relative overflow-hidden rounded-2xl border border-slate-200/90 bg-white hover:bg-gradient-to-br hover:${glow} hover:to-transparent p-8 shadow-xs hover:shadow-md transition-shadow`}
             >
-              <div className={`pointer-events-none absolute inset-0 bg-gradient-to-br ${glow} to-transparent`} />
               <div
-                className={`relative mb-6 inline-flex h-13 w-13 items-center justify-center rounded-2xl border ${color}`}
+                className={`pointer-events-none absolute inset-0 bg-white`}
+              />
+              <div
+                className={`relative mb-6 inline-flex h-12 w-12 items-center justify-center rounded-2xl border ${color}`}
               >
                 <Icon className="h-6 w-6" />
               </div>
-              <h3 className="relative mb-3 text-xl font-bold text-foreground">{title}</h3>
-              <p className="relative text-sm leading-7 text-muted-foreground">{body}</p>
+              <h3 className="relative mb-3 text-xl font-heading font-bold text-[#0F172A]">
+                {title}
+              </h3>
+              <p className="relative text-sm leading-relaxed text-slate-600">
+                {body}
+              </p>
             </motion.div>
           ))}
         </div>
 
-        {/* Wide story block */}
-        <motion.div
+        {/* Story & Platform Impact Block */}
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-12 rounded-3xl border border-primary/20 bg-gradient-to-br from-primary/5 to-violet-500/5 p-10 lg:p-14"
+          className="mt-12 rounded-3xl border border-indigo-100 bg-white p-8 lg:p-12 shadow-xs"
         >
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:items-center">
-            <div>
-              <h3 className="text-2xl font-bold text-foreground sm:text-3xl mb-5">The problem we set out to solve</h3>
-              <p className="text-base leading-8 text-muted-foreground mb-4">
-                In 2021, our founders were consulting for a Tier-1 university in Bengaluru. They discovered the
-                admissions team was managing 25,000 annual inquiries using a combination of Excel sheets, WhatsApp
-                groups, and three disconnected CRMs. Leads were slipping through the cracks daily.
+            <div className="space-y-4">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#4F46E5]">
+                Built For Modern Institutions
+              </span>
+              <h3 className="text-2xl font-heading font-extrabold text-[#0F172A] sm:text-3xl leading-snug">
+                The Problem We Built EnrollIQ To Solve
+              </h3>
+              <p className="text-sm leading-relaxed text-slate-600">
+                Most admission teams struggle with disconnected tools — Meta
+                Ads, Google Ads, publisher lead sources, custom web forms, and
+                separate telephony platforms. Leads end up waiting in
+                spreadsheets for hours before counselors can reach out.
               </p>
-              <p className="text-base leading-8 text-muted-foreground">
-                The irony? The same university had a state-of-the-art campus, Nobel Prize-winning faculty, and
-                world-class labs — but a broken funnel meant thousands of eligible students never made it past the first
-                interaction. That&apos;s the gap EnrollIQ closes.
+              <p className="text-sm leading-relaxed text-slate-600">
+                EnrollIQ centralizes the entire pipeline: auto-capturing leads
+                instantly, executing dynamic allocation rules, integrating
+                built-in telephony, and giving campaign managers real-time ROI
+                analytics.
               </p>
             </div>
+ 
             <div className="grid grid-cols-2 gap-4">
               {[
-                { before: '25,000 leads', after: 'Zero lost', label: 'Inquiries tracked' },
-                { before: '3 CRMs', after: '1 platform', label: 'Systems unified' },
-                { before: '12% conversion', after: '34% conversion', label: 'Enrolment rate' },
-                { before: '5 day', after: '2 hour', label: 'Average response time' },
+                {
+                  before: "Scattered Channels",
+                  after: "Unified Dashboard",
+                  label: "Lead Aggregation",
+                },
+                {
+                  before: "Manual Excel Assign",
+                  after: "Automated Routing",
+                  label: "Counselor Allocation",
+                },
+                {
+                  before: "Unclear Campaign ROI",
+                  after: "Real-Time Tracking",
+                  label: "Source Analytics",
+                },
+                {
+                  before: "Delayed Follow-ups",
+                  after: "Instant Lead Alerts",
+                  label: "Counselor Readiness",
+                },
               ].map(({ before, after, label }) => (
-                <div key={label} className="rounded-xl border border-border bg-card p-5">
-                  <p className="text-xs text-muted-foreground mb-1 line-through">{before}</p>
-                  <p className="text-lg font-bold text-primary">{after}</p>
-                  <p className="text-xs text-muted-foreground mt-1">{label}</p>
+                <div
+                  key={label}
+                  className="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-2xs"
+                >
+                  <p className="text-xs text-rose-500/80 mb-1 line-through font-medium">
+                    {before}
+                  </p>
+                  <p className="text-base sm:text-lg font-heading font-black text-[#4F46E5]">
+                    {after}
+                  </p>
+                  <p className="text-xs font-medium text-slate-500 mt-1">
+                    {label}
+                  </p>
                 </div>
               ))}
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

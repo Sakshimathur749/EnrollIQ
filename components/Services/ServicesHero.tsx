@@ -19,7 +19,7 @@ export default function ServicesHero() {
         />
       </div>
 
-      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 text-center">
         {/* Subtle pill badge matching theme */}
         <motion.div
           initial={{ opacity: 0, y: 15 }}
@@ -38,11 +38,21 @@ export default function ServicesHero() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="font-heading font-black text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.12]"
         >
-          Power Your Admissions with <br className="hidden sm:inline" />
+          Transform Your Admissions with <br className="hidden sm:inline" />
           <span className="bg-gradient-to-r from-indigo-400 via-indigo-300 to-violet-400 bg-clip-text text-transparent">
-            Smart Services & Integrations
+            Smart Solutions by EnrollIQ{" "}
           </span>
         </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="mt-6 text-base sm:text-lg lg:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed font-normal"
+        >
+          Empower your institution with automated workflows, real-time lead
+          tracking, and seamless integrations to accelerate admissions and drive
+          higher conversions.
+        </motion.p>
       </div>
     </section>
   );

@@ -23,6 +23,7 @@ import { EduNavbar } from "@/components/EduNavbar";
 import { EduFooter } from "@/components/EduFooter";
 import { CtaBanner } from "@/components/Home/CtaBanner";
 import { ScheduleDemoModal } from "@/components/Login/ScheduleDemoModal";
+import MainContact from "@/components/Contact/MainContact";
 
 export default function ContactPage() {
   const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
@@ -154,10 +155,8 @@ export default function ContactPage() {
       className="min-h-screen bg-gradient-to-b from-[#FAFAFE] via-white to-[#F8FAFC] text-slate-900 flex flex-col selection:bg-indigo-600 selection:text-white"
       id="contact-page-root"
     >
-      <EduNavbar onOpenDemo={() => setIsDemoModalOpen(true)} />
-
-      <main className="flex-1 py-12 sm:py-16 lg:py-24 overflow-hidden relative">
-        {/* Subtle Ambient Glows & Dot Matrix */}
+      <MainContact />
+      {/* <main className="flex-1 py-12 sm:py-16 lg:py-24 overflow-hidden relative">
         <div className="absolute top-10 left-1/4 w-[600px] h-[300px] bg-indigo-500/5 blur-[130px] rounded-full pointer-events-none" />
         <div className="absolute top-1/3 right-10 w-[500px] h-[350px] bg-purple-500/5 blur-[130px] rounded-full pointer-events-none" />
         <div
@@ -167,8 +166,6 @@ export default function ContactPage() {
             backgroundSize: "24px 24px",
           }}
         />
-
-        {/* Isometric Pattern Background on the Right */}
         <div className="absolute right-0 top-12 w-1/2 h-[600px] opacity-[0.035] pointer-events-none hidden lg:block overflow-hidden">
           <svg
             viewBox="0 0 500 500"
@@ -192,9 +189,7 @@ export default function ContactPage() {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-20 sm:space-y-28 lg:space-y-32">
-          {/* 1. TOP HERO & FORM SECTION */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-            {/* Left Content: Get In Touch & Channels */}
             <div className="lg:col-span-7 space-y-8 lg:space-y-10">
               <div className="space-y-4">
                 <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F3E8FF] border border-purple-200 text-xs font-bold uppercase tracking-wider text-[#7E22CE] shadow-2xs">
@@ -212,9 +207,7 @@ export default function ContactPage() {
                 </p>
               </div>
 
-              {/* Two Direct Enquiry Channels (Sales & Support) */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
-                {/* Sales Enquiries Card */}
                 <div className="p-6 rounded-2xl bg-white border border-slate-200/90 shadow-2xs space-y-4 hover:border-indigo-300 transition-all">
                   <div className="flex items-center justify-between">
                     <h2 className="font-heading font-bold text-xl text-[#0F172A] tracking-tight flex items-center gap-2">
@@ -251,8 +244,6 @@ export default function ContactPage() {
                     </div>
                   </div>
                 </div>
-
-                {/* Support Enquiries Card */}
                 <div className="p-6 rounded-2xl bg-white border border-slate-200/90 shadow-2xs space-y-4 hover:border-indigo-300 transition-all">
                   <div className="flex items-center justify-between">
                     <h2 className="font-heading font-bold text-xl text-[#0F172A] tracking-tight flex items-center gap-2">
@@ -287,7 +278,6 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              {/* Reassurance Badges */}
               <div className="grid grid-cols-3 gap-3 pt-2">
                 <div className="flex flex-col items-center text-center p-3 rounded-xl bg-slate-50 border border-slate-200/70">
                   <ShieldCheck className="w-5 h-5 text-emerald-600 mb-1" />
@@ -319,10 +309,8 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Right Card: Contact Sales Form */}
             <div className="lg:col-span-5">
               <div className="bg-white rounded-3xl p-6 sm:p-9 border border-slate-200/90 shadow-2xl shadow-indigo-500/5 relative transition-all">
-                {/* Header Icon + Title */}
                 <div className="space-y-2 mb-6">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-xl bg-indigo-50 border border-indigo-100 flex items-center justify-center text-[#4F46E5] shadow-2xs">
@@ -371,7 +359,6 @@ export default function ContactPage() {
                     className="space-y-3.5"
                     id="contact-sales-form"
                   >
-                    {/* Your Name */}
                     <div>
                       <input
                         type="text"
@@ -383,8 +370,6 @@ export default function ContactPage() {
                         id="contact-name-input"
                       />
                     </div>
-
-                    {/* Email */}
                     <div>
                       <input
                         type="email"
@@ -397,7 +382,6 @@ export default function ContactPage() {
                       />
                     </div>
 
-                    {/* Phone with Country Code Pill */}
                     <div className="flex rounded-xl bg-[#F8FAFC] border border-slate-200 focus-within:border-[#4F46E5] focus-within:bg-white focus-within:ring-2 focus-within:ring-[#4F46E5]/15 overflow-hidden transition-all">
                       <div className="px-3.5 py-3 bg-slate-100/80 border-r border-slate-200 text-sm font-semibold text-slate-700 flex items-center shrink-0">
                         +91
@@ -412,8 +396,6 @@ export default function ContactPage() {
                         id="contact-phone-input"
                       />
                     </div>
-
-                    {/* Institute Type Selector */}
                     <div className="grid grid-cols-2 gap-2">
                       <div>
                         <label className="block text-[11px] font-bold text-slate-600 mb-1">
@@ -466,8 +448,6 @@ export default function ContactPage() {
                         </select>
                       </div>
                     </div>
-
-                    {/* Requirements Textarea */}
                     <div>
                       <textarea
                         rows={2}
@@ -478,8 +458,6 @@ export default function ContactPage() {
                         id="contact-requirement-input"
                       />
                     </div>
-
-                    {/* Submit Button */}
                     <button
                       type="submit"
                       disabled={isSubmitting}
@@ -506,12 +484,10 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* 2. OFFICE LOCATIONS SECTION */}
           <div
             className="space-y-8 sm:space-y-10"
             id="office-locations-section"
           >
-            {/* Section Header */}
             <div className="text-center max-w-2xl mx-auto space-y-2">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 text-xs font-bold text-slate-700">
                 <Globe2 className="w-3.5 h-3.5 text-[#4F46E5]" />
@@ -525,10 +501,7 @@ export default function ContactPage() {
                 here
               </p>
             </div>
-
-            {/* Offices Grid */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
-              {/* Left Featured Card: Head Office */}
               <div className="lg:col-span-6 bg-white rounded-3xl border border-slate-200/90 p-6 sm:p-8 flex flex-col justify-between shadow-2xs hover:shadow-md transition-all group">
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
@@ -559,14 +532,12 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                {/* Cityscape Graphic Illustration */}
                 <div className="mt-8 pt-6 border-t border-slate-100 overflow-hidden relative">
                   <svg
                     viewBox="0 0 500 160"
                     className="w-full h-36 sm:h-44 text-slate-400 opacity-90 mx-auto"
                     fill="none"
                   >
-                    {/* Background City Silhouettes */}
                     <rect x="20" y="70" width="40" height="90" fill="#F1F5F9" />
                     <rect
                       x="70"
@@ -612,7 +583,6 @@ export default function ContactPage() {
                       fill="#94A3B8"
                     />
 
-                    {/* Window Grid Patterns */}
                     <g fill="#94A3B8" opacity="0.6">
                       <rect x="76" y="58" width="8" height="6" />
                       <rect x="88" y="58" width="8" height="6" />
@@ -637,14 +607,10 @@ export default function ContactPage() {
                       <rect x="195" y="105" width="10" height="8" />
                       <rect x="215" y="105" width="10" height="8" />
                     </g>
-
-                    {/* Tower Stripes */}
                     <g stroke="#FFFFFF" strokeWidth="1.5" opacity="0.3">
                       <line x1="265" y1="20" x2="255" y2="160" />
                       <line x1="268" y1="20" x2="280" y2="160" />
                     </g>
-
-                    {/* Low-rise modern wing & Trees */}
                     <rect
                       x="312"
                       y="70"
@@ -662,8 +628,6 @@ export default function ContactPage() {
                       stroke="#94A3B8"
                       strokeWidth="3"
                     />
-
-                    {/* Street Elements / Bus / Cars */}
                     <g fill="#4F46E5" opacity="0.85">
                       <rect x="30" y="146" width="28" height="12" rx="3" />
                       <circle cx="36" cy="158" r="2.5" fill="#0F172A" />
@@ -675,7 +639,6 @@ export default function ContactPage() {
                       <circle cx="164" cy="158" r="2" fill="#0F172A" />
                     </g>
 
-                    {/* Green shrubs */}
                     <circle cx="100" cy="154" r="5" fill="#10B981" />
                     <circle cx="107" cy="154" r="6" fill="#059669" />
                     <circle cx="390" cy="154" r="6" fill="#10B981" />
@@ -683,8 +646,6 @@ export default function ContactPage() {
                   </svg>
                 </div>
               </div>
-
-              {/* Right 2x2 Grid: Regional Offices */}
               <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {regionalOffices.map((office, idx) => (
                   <div
@@ -693,7 +654,6 @@ export default function ContactPage() {
                     id={`office-card-${idx}`}
                   >
                     <div>
-                      {/* Top Header Row */}
                       <div className="flex items-center justify-between mb-3">
                         <div className="w-11 h-11 rounded-2xl bg-slate-50 border border-slate-100 flex items-center justify-center shrink-0 shadow-2xs">
                           {office.iconSvg}
@@ -702,8 +662,6 @@ export default function ContactPage() {
                           {office.region}
                         </span>
                       </div>
-
-                      {/* City Info */}
                       <div className="space-y-1 text-left">
                         <h4 className="font-heading font-bold text-base text-[#0F172A] leading-tight">
                           {office.city}
@@ -713,8 +671,6 @@ export default function ContactPage() {
                         </p>
                       </div>
                     </div>
-
-                    {/* Contact footer */}
                     <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] font-semibold text-slate-600">
                       <span className="text-slate-500">{office.landmark}</span>
                       <a
@@ -730,19 +686,7 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
-      </main>
-
-      {/* HOMEPAGE CTA BANNER */}
-      <CtaBanner onOpenDemo={() => setIsDemoModalOpen(true)} />
-
-      {/* FOOTER */}
-      <EduFooter onOpenDemo={() => setIsDemoModalOpen(true)} />
-
-      {/* Interactive Schedule Demo Modal */}
-      <ScheduleDemoModal
-        isOpen={isDemoModalOpen}
-        onClose={() => setIsDemoModalOpen(false)}
-      />
+      </main> */}
     </div>
   );
 }

@@ -2,12 +2,13 @@
 import AboutHeroSection from "./AboutHeroSection";
 import MissionSection from "./MissionSection";
 import TeamSection from "./TeamSection";
-import ValuesSection from "./ValuesSection";
+import PlatformPillarsSection from "./PlatformPillarsSection";
 import TimelineSection from "./TimelineSection";
 import { EduNavbar } from "../EduNavbar";
 import { EduFooter } from "../EduFooter";
 import { CtaBanner } from "../Home/CtaBanner";
 import { useState } from "react";
+import { ProblemSolutionSection } from "./ProblemSolutionSection";
 
 export default function MainAbout() {
   const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
@@ -17,9 +18,10 @@ export default function MainAbout() {
       <EduNavbar />
       <AboutHeroSection />
       <MissionSection />
-      <TeamSection />
-      <ValuesSection />
-      <TimelineSection />
+      <ProblemSolutionSection />
+      {/* <TeamSection /> */}
+      <PlatformPillarsSection />
+      {/* <TimelineSection /> */}
       <CtaBanner onOpenDemo={() => setIsDemoModalOpen(true)} />
       <EduFooter />
     </>

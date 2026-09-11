@@ -46,14 +46,14 @@ export function CtaBanner({ onOpenDemo }: CtaBannerProps) {
 
   return (
     <section
-      className="relative py-20 lg:py-24 bg-gradient-to-b from-white via-[#F5F3FF]/40 to-[#EEF2FF] text-slate-900 overflow-hidden border-t border-slate-200/80"
+      className="relative py-20 lg:py-24 bg-gradient-to-b from-[#EEF2FF] to-[#E0E7FF] text-slate-900 overflow-hidden border-t border-slate-200/80"
       id="cta-banner"
     >
       {/* Topographic and ambient gradient background matching the light theme */}
       <div
         className="absolute inset-0 opacity-[0.03] pointer-events-none"
         style={{
-          backgroundImage: `radial-gradient(#4F46E5 1px, transparent 1px)`,
+          backgroundImage: `radial-gradient(#0F172A 1px, transparent 1px)`,
           backgroundSize: "24px 24px",
         }}
       />

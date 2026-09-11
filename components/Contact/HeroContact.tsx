@@ -8,9 +8,7 @@ interface AboutHeroSectionProps {
   onOpenDemo?: () => void;
 }
 
-export default function AboutHeroSection({
-  onOpenDemo,
-}: AboutHeroSectionProps) {
+export default function HeroContact({ onOpenDemo }: AboutHeroSectionProps) {
   return (
     <section
       className="relative overflow-hidden bg-gradient-to-b from-[#0A0E1A] via-[#0F172A] to-[#0A0D1A] pt-24 pb-16 sm:pt-28 sm:pb-20 border-b border-slate-800/80 text-white"
@@ -38,7 +36,7 @@ export default function AboutHeroSection({
           className="mb-4 inline-flex items-center gap-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-3.5 py-1.5 text-xs font-semibold text-indigo-300 backdrop-blur-md shadow-xs"
         >
           <Sparkles className="h-3.5 w-3.5 text-indigo-400" />
-          <span>About EnrollIQ CRM</span>
+          <span>Get in Touch</span>
         </motion.div>
 
         {/* Clean, Theme-Aligned Heading matching ServicesHero style */}
@@ -48,10 +46,9 @@ export default function AboutHeroSection({
           transition={{ duration: 0.5, delay: 0.1 }}
           className="font-heading font-black text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.12]"
         >
-          Empowering Educational Institutions{" "}
-          <br className="hidden sm:inline" />
+          We're Here to Help <br className="hidden sm:inline" />
           <span className="bg-gradient-to-r from-indigo-400 via-indigo-300 to-violet-400 bg-clip-text text-transparent">
-            To Grow Faster &amp; Smarter
+            Transform Your Admissions
           </span>
         </motion.h1>
 
@@ -62,9 +59,8 @@ export default function AboutHeroSection({
           transition={{ duration: 0.5, delay: 0.2 }}
           className="mt-6 text-base sm:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed font-normal"
         >
-          EnrollIQ is an AI-powered education CRM built specifically to
-          streamline lead management, eliminate manual counselor allocation, and
-          deliver real-time attribution insights.
+          Have questions about EnrollIQ or need a custom solution? Reach out to
+          our team and discover how we can elevate your institution's growth.
         </motion.p>
       </div>
     </section>

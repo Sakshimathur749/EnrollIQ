@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import {
   Share2,
   Globe2,
@@ -19,7 +19,7 @@ import {
   Layers,
   Send,
   ArrowRightLeft,
-} from 'lucide-react';
+} from "lucide-react";
 
 // ==========================================
 // HIGH-FIDELITY VECTOR LOGOS & ICONS FOR ALL SERVICES
@@ -64,7 +64,9 @@ export function FacebookLogo() {
       <svg className="w-6 h-6 shrink-0 fill-[#1877F2]" viewBox="0 0 24 24">
         <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
       </svg>
-      <span className="font-bold text-lg tracking-tight text-[#1877F2]">facebook</span>
+      <span className="font-bold text-lg tracking-tight text-[#1877F2]">
+        facebook
+      </span>
     </div>
   );
 }
@@ -72,28 +74,36 @@ export function FacebookLogo() {
 export function ShikshaLogo() {
   return (
     <div className="flex items-center gap-2.5">
-      <svg className="w-7 h-7 shrink-0" viewBox="0 0 32 32" fill="none">
-        <rect width="32" height="32" rx="8" fill="url(#shiksha-grad)" />
-        <path d="M16 8L7 13L16 18L25 13L16 8Z" fill="#FFFFFF" />
+      <svg
+        className="w-7 h-7 shrink-0"
+        viewBox="0 0 40 40"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect width="40" height="40" rx="8" fill="#FF5B00" />
+        {/* Official Shiksha Mortarboard Cap Vector */}
+        <path d="M20 10L6 18L20 26L34 18L20 10Z" fill="#FFFFFF" />
         <path
-          d="M10 15.5V20.5C10 22.5 12.7 24 16 24C19.3 24 22 22.5 22 20.5V15.5"
+          d="M11 21.5V27.5C11 29.5 15 31 20 31C25 31 29 29.5 29 27.5V21.5"
           stroke="#FFFFFF"
-          strokeWidth="1.7"
+          strokeWidth="2.2"
           strokeLinecap="round"
         />
-        <path d="M25 13.5V19.5" stroke="#FFFFFF" strokeWidth="1.7" strokeLinecap="round" />
-        <defs>
-          <linearGradient id="shiksha-grad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#FF7A00" />
-            <stop offset="1" stopColor="#E05305" />
-          </linearGradient>
-        </defs>
+        <path
+          d="M32 19V27"
+          stroke="#FFFFFF"
+          strokeWidth="2.2"
+          strokeLinecap="round"
+        />
+        <circle cx="32" cy="28.5" r="1.5" fill="#FFFFFF" />
       </svg>
       <div className="flex flex-col">
-        <span className="font-extrabold text-base tracking-tight text-[#E05305] leading-none">
-          shiksha<span className="text-slate-700">.com</span>
+        <span className="font-black text-base tracking-tight text-[#2D3748] leading-none">
+          shiksha<span className="text-[#FF5B00]">.com</span>
         </span>
-        <span className="text-[10px] font-medium text-slate-500">Education Discovery</span>
+        <span className="text-[10px] font-medium text-slate-500">
+          Education Discovery
+        </span>
       </div>
     </div>
   );
@@ -102,22 +112,30 @@ export function ShikshaLogo() {
 export function CollegeDuniaLogo() {
   return (
     <div className="flex items-center gap-2.5">
-      <svg className="w-7 h-7 shrink-0" viewBox="0 0 32 32" fill="none">
-        <rect width="32" height="32" rx="8" fill="#001E3C" />
-        <path d="M16 7L6 12.5L16 18L26 12.5L16 7Z" fill="#FF9900" />
+      <svg
+        className="w-7 h-7 shrink-0"
+        viewBox="0 0 40 40"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect width="40" height="40" rx="8" fill="#0B2239" />
+        {/* Official CollegeDunia Icon Vector */}
+        <path d="M20 9L6 16.5L20 24L34 16.5L20 9Z" fill="#FF9900" />
         <path
-          d="M9 15.2V21C9 23.2 12.1 25 16 25C19.9 25 23 23.2 23 21V15.2"
+          d="M10 20V26C10 28.2 14.5 30 20 30C25.5 30 30 28.2 30 26V20"
           stroke="#FF9900"
-          strokeWidth="1.8"
+          strokeWidth="2.2"
           strokeLinecap="round"
         />
-        <circle cx="16" cy="16" r="2.2" fill="#FFFFFF" />
+        <circle cx="20" cy="16.5" r="2.5" fill="#FFFFFF" />
       </svg>
       <div className="flex flex-col">
-        <span className="font-bold text-sm tracking-tight text-[#001E3C] leading-none">
+        <span className="font-bold text-sm tracking-tight text-[#0B2239] leading-none">
           college<span className="text-[#FF9900]">dunia</span>
         </span>
-        <span className="text-[10px] font-medium text-slate-500">Admission Search Hub</span>
+        <span className="text-[10px] font-medium text-slate-500">
+          Admission Search Hub
+        </span>
       </div>
     </div>
   );
@@ -126,29 +144,35 @@ export function CollegeDuniaLogo() {
 export function EdustokeLogo() {
   return (
     <div className="flex items-center gap-2.5">
-      <svg className="w-7 h-7 shrink-0" viewBox="0 0 32 32" fill="none">
-        <rect width="32" height="32" rx="8" fill="url(#edustoke-grad)" />
+      <svg
+        className="w-7 h-7 shrink-0"
+        viewBox="0 0 40 40"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect width="40" height="40" rx="8" fill="#00A896" />
+        {/* Official Edustoke Stylized 'E' Icon */}
         <path
-          d="M16 6C10.5 6 6 10.5 6 16C6 21.5 10.5 26 16 26C21.5 26 26 21.5 26 16C26 10.5 21.5 6 16 6Z"
-          fill="#008344"
-        />
-        <path
-          d="M16 10V22M11 14L16 10L21 14M12 18L16 22L20 18"
+          d="M12 11H28C28 11 28 15 20 15C12 15 12 19 28 19C28 23 20 23 12 23H28"
           stroke="#FFFFFF"
-          strokeWidth="2"
+          strokeWidth="3"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
-        <defs>
-          <linearGradient id="edustoke-grad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
-            <stop stopColor="#00C853" />
-            <stop offset="1" stopColor="#007E33" />
-          </linearGradient>
-        </defs>
+        <path
+          d="M12 11V29"
+          stroke="#FFFFFF"
+          strokeWidth="3"
+          strokeLinecap="round"
+        />
       </svg>
       <div className="flex flex-col">
-        <span className="font-extrabold text-sm tracking-tight text-[#008344] leading-none">edustoke</span>
-        <span className="text-[10px] font-medium text-slate-500">School & College Lead Portal</span>
+        <span className="font-extrabold text-sm tracking-tight text-[#00A896] leading-none">
+          edustoke
+        </span>
+        <span className="text-[10px] font-medium text-slate-500">
+          School & College Lead Portal
+        </span>
       </div>
     </div>
   );
@@ -163,13 +187,20 @@ export function MyOperatorLogo() {
           d="M16 8C11.6 8 8 11.6 8 16V20C8 21.1 8.9 22 10 22H11C11.6 22 12 21.6 12 21V17C12 16.4 11.6 16 11 16H9.6C9.9 12.6 12.6 10 16 10C19.4 10 22.1 12.6 22.4 16H21C20.4 16 20 16.4 20 17V21C20 21.6 20.4 22 21 22H22C23.1 22 24 21.1 24 20V16C24 11.6 20.4 8 16 8Z"
           fill="#FFFFFF"
         />
-        <path d="M22 22V23.5C22 24.3 21.3 25 20.5 25H17" stroke="#FFFFFF" strokeWidth="1.8" strokeLinecap="round" />
+        <path
+          d="M22 22V23.5C22 24.3 21.3 25 20.5 25H17"
+          stroke="#FFFFFF"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+        />
       </svg>
       <div className="flex flex-col">
         <span className="font-extrabold text-sm tracking-tight text-[#D32F2F] leading-none">
           My<span className="text-slate-900">Operator</span>
         </span>
-        <span className="text-[10px] font-medium text-slate-500">Cloud Telephony & IVR</span>
+        <span className="text-[10px] font-medium text-slate-500">
+          Cloud Telephony & IVR
+        </span>
       </div>
     </div>
   );
@@ -193,13 +224,20 @@ export function TeleCMILogo() {
           strokeLinecap="round"
         />
         <circle cx="16" cy="20" r="1.8" fill="#FFFFFF" />
-        <path d="M16 6V9" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" />
+        <path
+          d="M16 6V9"
+          stroke="#FFFFFF"
+          strokeWidth="2"
+          strokeLinecap="round"
+        />
       </svg>
       <div className="flex flex-col">
         <span className="font-extrabold text-sm tracking-tight text-[#0284C7] leading-none">
           Tele<span className="text-slate-900">CMI</span>
         </span>
-        <span className="text-[10px] font-medium text-slate-500">Virtual PBX Dialer</span>
+        <span className="text-[10px] font-medium text-slate-500">
+          Virtual PBX Dialer
+        </span>
       </div>
     </div>
   );
@@ -222,8 +260,12 @@ export function GoogleAdsLogo() {
         </svg>
       </div>
       <div className="flex flex-col">
-        <span className="font-bold text-sm tracking-tight text-slate-900 leading-none">Google Ads</span>
-        <span className="text-[10px] font-medium text-slate-500">PPC & Search Leads</span>
+        <span className="font-bold text-sm tracking-tight text-slate-900 leading-none">
+          Google Ads
+        </span>
+        <span className="text-[10px] font-medium text-slate-500">
+          PPC & Search Leads
+        </span>
       </div>
     </div>
   );
@@ -239,8 +281,12 @@ export function GoogleMyBusinessLogo() {
         <rect x="13" y="16" width="6" height="6" rx="1" fill="#4285F4" />
       </svg>
       <div className="flex flex-col">
-        <span className="font-bold text-xs sm:text-sm tracking-tight text-slate-900 leading-none">Google Business</span>
-        <span className="text-[10px] font-medium text-slate-500">Local Maps & Inquiries</span>
+        <span className="font-bold text-xs sm:text-sm tracking-tight text-slate-900 leading-none">
+          Google Business
+        </span>
+        <span className="text-[10px] font-medium text-slate-500">
+          Local Maps & Inquiries
+        </span>
       </div>
     </div>
   );
@@ -257,8 +303,12 @@ export function MetaInstantFormsLogo() {
         />
       </svg>
       <div className="flex flex-col">
-        <span className="font-bold text-xs sm:text-sm tracking-tight text-slate-900 leading-none">Meta Lead Ads</span>
-        <span className="text-[10px] font-medium text-slate-500">FB & IG Instant Forms</span>
+        <span className="font-bold text-xs sm:text-sm tracking-tight text-slate-900 leading-none">
+          Meta Lead Ads
+        </span>
+        <span className="text-[10px] font-medium text-slate-500">
+          FB & IG Instant Forms
+        </span>
       </div>
     </div>
   );
@@ -274,8 +324,12 @@ export function MetaConversionsApiLogo() {
         <circle cx="24" cy="22" r="2" fill="#00F0FF" />
       </svg>
       <div className="flex flex-col">
-        <span className="font-bold text-xs sm:text-sm tracking-tight text-slate-900 leading-none">Meta CAPI</span>
-        <span className="text-[10px] font-medium text-slate-500">Server Conversions API</span>
+        <span className="font-bold text-xs sm:text-sm tracking-tight text-slate-900 leading-none">
+          Meta CAPI
+        </span>
+        <span className="text-[10px] font-medium text-slate-500">
+          Server Conversions API
+        </span>
       </div>
     </div>
   );
@@ -288,11 +342,20 @@ export function AwsSesLogo() {
         <rect width="32" height="32" rx="8" fill="#232F3E" />
         <path d="M8 11L16 16.5L24 11V21H8V11Z" fill="#FF9900" />
         <path d="M8 11L16 16.5L24 11H8Z" fill="#FFB84D" />
-        <path d="M10 24.5C13.5 26.2 18.5 26.2 22 24.5" stroke="#FF9900" strokeWidth="1.8" strokeLinecap="round" />
+        <path
+          d="M10 24.5C13.5 26.2 18.5 26.2 22 24.5"
+          stroke="#FF9900"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+        />
       </svg>
       <div className="flex flex-col">
-        <span className="font-bold text-sm tracking-tight text-slate-900 leading-none">Amazon SES</span>
-        <span className="text-[10px] font-medium text-slate-500">Cloud Email Delivery</span>
+        <span className="font-bold text-sm tracking-tight text-slate-900 leading-none">
+          Amazon SES
+        </span>
+        <span className="text-[10px] font-medium text-slate-500">
+          Cloud Email Delivery
+        </span>
       </div>
     </div>
   );
@@ -305,8 +368,12 @@ export function EmailCampaignsLogo() {
         <Send className="w-3.5 h-3.5 text-white" />
       </div>
       <div className="flex flex-col">
-        <span className="font-bold text-sm tracking-tight text-slate-900 leading-none">Campaign Studio</span>
-        <span className="text-[10px] font-medium text-slate-500">Automated Drip Studio</span>
+        <span className="font-bold text-sm tracking-tight text-slate-900 leading-none">
+          Campaign Studio
+        </span>
+        <span className="text-[10px] font-medium text-slate-500">
+          Automated Drip Studio
+        </span>
       </div>
     </div>
   );
@@ -321,8 +388,12 @@ export function WhatsAppLogo() {
         </svg>
       </div>
       <div className="flex flex-col">
-        <span className="font-bold text-sm tracking-tight text-[#25D366] leading-none">WhatsApp</span>
-        <span className="text-[10px] font-medium text-slate-500">Official Cloud API</span>
+        <span className="font-bold text-sm tracking-tight text-[#25D366] leading-none">
+          WhatsApp
+        </span>
+        <span className="text-[10px] font-medium text-slate-500">
+          Official Cloud API
+        </span>
       </div>
     </div>
   );
@@ -331,14 +402,32 @@ export function WhatsAppLogo() {
 export function GoogleSheetsLogo() {
   return (
     <div className="flex items-center gap-2.5">
-      <svg className="w-7 h-7 shrink-0" viewBox="0 0 32 32" fill="none">
-        <rect width="32" height="32" rx="8" fill="#0F9D58" />
-        <path d="M10 9H22V23H10V9Z" fill="#FFFFFF" rx="1" />
-        <path d="M10 13H22M10 17H22M15 9V23" stroke="#0F9D58" strokeWidth="1.5" />
+      <svg
+        className="w-7 h-7 shrink-0"
+        viewBox="0 0 40 40"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M26 6H10C8.89543 6 8 6.89543 8 8V32C8 33.1046 8.89543 34 10 34H30C31.1046 34 32 33.1046 32 32V12L26 6Z"
+          fill="#0F9D58"
+        />
+        <path d="M26 6V12H32L26 6Z" fill="#87CEAC" />
+        <rect x="13" y="18" width="14" height="11" rx="1" fill="#FFFFFF" />
+        <path
+          d="M13 21.5H27M13 25H27M18 18V29M22 18V29"
+          stroke="#0F9D58"
+          strokeWidth="1"
+          stroke-linecap="round"
+        />
       </svg>
       <div className="flex flex-col">
-        <span className="font-bold text-sm tracking-tight text-slate-900 leading-none">Google Sheets</span>
-        <span className="text-[10px] font-medium text-slate-500">Live Two-Way Sync</span>
+        <span className="font-bold text-sm tracking-tight text-slate-900 leading-none">
+          Google Sheets
+        </span>
+        <span className="text-[10px] font-medium text-slate-500">
+          Live Two-Way Sync
+        </span>
       </div>
     </div>
   );
@@ -351,8 +440,12 @@ export function CsvImportLogo() {
         <FileSpreadsheet className="w-4 h-4 text-white" />
       </div>
       <div className="flex flex-col">
-        <span className="font-bold text-sm tracking-tight text-slate-900 leading-none">CSV & Excel Loader</span>
-        <span className="text-[10px] font-medium text-slate-500">Bulk Spreadsheet Ingestion</span>
+        <span className="font-bold text-sm tracking-tight text-slate-900 leading-none">
+          CSV & Excel Loader
+        </span>
+        <span className="text-[10px] font-medium text-slate-500">
+          Bulk Spreadsheet Ingestion
+        </span>
       </div>
     </div>
   );
@@ -365,8 +458,12 @@ export function FieldMappingLogo() {
         <ArrowRightLeft className="w-4 h-4 text-white" />
       </div>
       <div className="flex flex-col">
-        <span className="font-bold text-xs sm:text-sm tracking-tight text-slate-900 leading-none">Field Mapping</span>
-        <span className="text-[10px] font-medium text-slate-500">Smart Auto-Matcher</span>
+        <span className="font-bold text-xs sm:text-sm tracking-tight text-slate-900 leading-none">
+          Field Mapping
+        </span>
+        <span className="text-[10px] font-medium text-slate-500">
+          Smart Auto-Matcher
+        </span>
       </div>
     </div>
   );
@@ -385,8 +482,12 @@ export function ZapierLogo() {
         />
       </svg>
       <div className="flex flex-col">
-        <span className="font-extrabold text-sm tracking-tight text-[#FF4A00] leading-none">zapier</span>
-        <span className="text-[10px] font-medium text-slate-500">5,000+ App Triggers</span>
+        <span className="font-extrabold text-sm tracking-tight text-[#FF4A00] leading-none">
+          zapier
+        </span>
+        <span className="text-[10px] font-medium text-slate-500">
+          5,000+ App Triggers
+        </span>
       </div>
     </div>
   );
@@ -406,35 +507,16 @@ export function CalendlyLogo() {
         <circle cx="19.5" cy="15" r="1.8" fill="#FFFFFF" />
       </svg>
       <div className="flex flex-col">
-        <span className="font-bold text-sm tracking-tight text-[#006BFF] leading-none">Calendly</span>
-        <span className="text-[10px] font-medium text-slate-500">Counseling Slot Booking</span>
+        <span className="font-bold text-sm tracking-tight text-[#006BFF] leading-none">
+          Calendly
+        </span>
+        <span className="text-[10px] font-medium text-slate-500">
+          Counseling Slot Booking
+        </span>
       </div>
     </div>
   );
 }
-
-export function ZoomMeetLogo() {
-  return (
-    <div className="flex items-center gap-2.5">
-      <svg className="w-7 h-7 shrink-0" viewBox="0 0 32 32" fill="none">
-        <rect width="32" height="32" rx="8" fill="#2D8CFF" />
-        <path
-          d="M8 12C8 10.9 8.9 10 10 10H18C19.1 10 20 10.9 20 12V20C20 21.1 19.1 22 18 22H10C8.9 22 8 21.1 8 20V12Z"
-          fill="#FFFFFF"
-        />
-        <path d="M20 14L24 11V21L20 18V14Z" fill="#FFFFFF" />
-      </svg>
-      <div className="flex flex-col">
-        <span className="font-bold text-sm tracking-tight text-[#2D8CFF] leading-none">Zoom & Meet</span>
-        <span className="text-[10px] font-medium text-slate-500">Virtual Interview Links</span>
-      </div>
-    </div>
-  );
-}
-
-// ==========================================
-// ALL SERVICE CATEGORIES DATA SPECIFICATION
-// ==========================================
 
 export interface ServiceCategory {
   id: string;
@@ -445,74 +527,76 @@ export interface ServiceCategory {
   descriptionBottom?: string;
   icon: React.ElementType;
   illustrationType:
-    | 'social'
-    | 'lead-gen'
-    | 'telephony'
-    | 'ads'
-    | 'email'
-    | 'messaging'
-    | 'import'
-    | 'automation'
-    | 'wallet'
-    | 'lms'
-    | 'exams'
-    | 'erp'
-    | 'verification'
-    | 'meetings';
+    | "social"
+    | "lead-gen"
+    | "telephony"
+    | "ads"
+    | "email"
+    | "messaging"
+    | "import"
+    | "automation"
+    | "wallet"
+    | "lms"
+    | "exams"
+    | "erp"
+    | "verification";
   logos: React.ReactNode[];
 }
-
 export const serviceCategories: ServiceCategory[] = [
   {
-    id: 'social-plugins',
-    menuTitle: 'Social Plugins',
-    badge: 'Audience Sync',
-    title: 'Social Plugins',
+    id: "social-plugins",
+    menuTitle: "Social Plugins",
+    badge: "Core Integration",
+    title: "Social Media & Audience Sync",
     descriptionTop:
-      'Automate recurring audience push to your Google and Facebook accounts and forget needing to sync your data ever again. Create custom audience lists directly from the lead or application manager with advanced filters at your disposal.',
+      "Kickstart your digital outreach by seamlessly connecting your Google and Facebook channels. Sync incoming audience data directly into CRM and manage lead pools from a centralized dashboard without manual data transfers.",
     descriptionBottom:
-      'Further, through advanced Google/Facebook lead capturing, centralize your incoming leads and add them to your existing lead pool to ensure 360° nurturing.',
+      "Capture inbound leads from social ads automatically and ensure instant entry into your primary pipeline for immediate response.",
     icon: Share2,
-    illustrationType: 'social',
+    illustrationType: "social",
     logos: [<GoogleLogo key="google" />, <FacebookLogo key="facebook" />],
   },
   {
-    id: 'lead-generation-websites',
-    menuTitle: 'Lead Generation Websites',
-    badge: 'Aggregators & Portals',
-    title: 'Lead Generation Websites',
+    id: "lead-generation-websites",
+    menuTitle: "Lead Generation Websites",
+    badge: "API Ingestion",
+    title: "Lead Aggregator & Portal Ingestion",
     descriptionTop:
-      'Say goodbye to storing and matching your data in spreadsheets or toggling between platforms to keep a track of the leads being generated. Integrate your third-party lead sources with your platform to have a real-time check-in of the leads, from inquiry to enrollment.',
+      "Consolidate all third-party lead sources directly into your CRM. Eliminate spreadsheet dependencies by connecting external educational portals and web platforms via real-time webhooks.",
     descriptionBottom:
-      'Direct API webhooks ingest student inquiries instantaneously with automated deduplication and counselor assignment in under 2 seconds.',
+      "Ensure fast inquiry capture with instant deduplication and automatic team assignment as soon as leads hit the system.",
     icon: Globe2,
-    illustrationType: 'lead-gen',
-    logos: [<ShikshaLogo key="shiksha" />, <CollegeDuniaLogo key="collegedunia" />, <EdustokeLogo key="edustoke" />],
+    illustrationType: "lead-gen",
+    logos: [
+      <ShikshaLogo key="shiksha" />,
+      <CollegeDuniaLogo key="collegedunia" />,
+      <EdustokeLogo key="edustoke" />,
+    ],
   },
   {
-    id: 'cloud-telephony-solutions',
-    menuTitle: 'Cloud Telephony Solutions',
-    badge: 'Voice & Calling',
-    title: 'Cloud Telephony Solutions',
+    id: "cloud-telephony-solutions",
+    menuTitle: "Cloud Telephony",
+    badge: "Voice & Call Logging",
+    title: "Cloud Telephony & Call Management",
     descriptionTop:
-      'Empower your counselors with one-click dialers directly from the student timeline. Every inbound and outbound call is automatically logged, recorded, and analyzed with call duration and disposition tagging.',
+      "Equip your sales or admissions team with click-to-call functionality straight from the contact record. Track inbound and outbound calls with essential details like duration and disposition tags.",
     descriptionBottom:
-      'Integrate enterprise cloud telephony systems like MyOperator and TeleCMI to enable smart IVR routing, virtual receptionist numbers, and agent performance leaderboards.',
+      "Integrate enterprise cloud telephony providers like MyOperator and TeleCMI to centralize call records and maintain detailed activity histories for every lead.",
     icon: PhoneCall,
-    illustrationType: 'telephony',
+    illustrationType: "telephony",
     logos: [<MyOperatorLogo key="myoperator" />, <TeleCMILogo key="telecmi" />],
   },
   {
-    id: 'ads-campaigns',
-    menuTitle: 'ADs & Paid Campaigns',
-    badge: 'Performance Marketing',
-    title: 'ADs & Paid Campaign Management',
+    id: "ads-campaigns",
+    menuTitle: "Ads & Campaign Tracking",
+    badge: "Ad Performance",
+    title: "Paid Campaign & Lead Capture",
     descriptionTop:
-      'Connect your Google Ads, Google My Business, and Meta campaign accounts to seamlessly capture instant lead forms and pass server-side conversion signals back to advertising algorithms for optimized cost-per-lead (CPL).',
+      "Link your Google Ads, Meta Ads, and Google Business Profile to capture lead forms instantly. Direct conversion data seamlessly into your CRM to track ad spend effectiveness.",
     descriptionBottom:
-      'Track full-funnel multi-touch attribution: know exactly which campaign, ad set, creative, and keyword triggered each admitted student.',
+      "Gain visibility into campaign sources and channel origins so you can easily identify which ads drive genuine inquiries.",
     icon: Megaphone,
-    illustrationType: 'ads',
+    illustrationType: "ads",
     logos: [
       <GoogleAdsLogo key="gads" />,
       <GoogleMyBusinessLogo key="gmb" />,
@@ -521,69 +605,60 @@ export const serviceCategories: ServiceCategory[] = [
     ],
   },
   {
-    id: 'email-connector',
-    menuTitle: 'Email Connector',
-    badge: 'High Deliverability',
-    title: 'Email Connectors & Campaign Studio',
+    id: "email-connector",
+    menuTitle: "Email Connector",
+    badge: "Communication",
+    title: "Email Integration & Outreach Studio",
     descriptionTop:
-      'Connect your institutional email infrastructure via Amazon SES or custom SMTP relays. Build responsive drag-and-drop email templates, trigger behavior-driven automated drips, and monitor open and click rates in real time.',
+      "Connect your institutional or company email server using Amazon SES or standard SMTP settings. Create email templates and deliver important updates directly through your CRM.",
     descriptionBottom:
-      'Ensure 99.8% inbox deliverability with dedicated IP routing, SPF/DKIM verification, and automated unsubscribe compliance.',
+      "Track basic open and click metrics while ensuring proper email deliverability setup with SPF and DKIM authentication.",
     icon: Mail,
-    illustrationType: 'email',
-    logos: [<AwsSesLogo key="ses" />, <EmailCampaignsLogo key="campaigns" />],
+    illustrationType: "email",
+    logos: [<AwsSesLogo key="ses" />],
   },
+  // {
+  //   id: "messaging-whatsapp",
+  //   menuTitle: "WhatsApp & Messaging",
+  //   badge: "Direct Chat",
+  //   title: "WhatsApp Business Integration",
+  //   descriptionTop:
+  //     "Start communicating on the channels your leads prefer. Use the WhatsApp Business API to send direct updates, broadcast announcements, and routine notifications.",
+  //   descriptionBottom:
+  //     "Provide your team with a multi-agent inbox view so multiple team members can manage and respond to incoming chats centrally.",
+  //   icon: MessageCircle,
+  //   illustrationType: "messaging",
+  //   logos: [<WhatsAppLogo key="whatsapp" />],
+  // },
   {
-    id: 'messaging-whatsapp',
-    menuTitle: 'Messaging & WhatsApp',
-    badge: 'Instant Chat',
-    title: 'Messaging & WhatsApp Business API',
+    id: "lead-import-mapping",
+    menuTitle: "Data Import & Mapping",
+    badge: "Data Onboarding",
+    title: "Smart Lead Import & Field Mapping",
     descriptionTop:
-      'Engage applicants instantly on their favorite channel. Use the official WhatsApp Business Cloud API to send broadcast alerts, entrance exam reminders, application fee links, and automated two-way chatbots.',
+      "Easily onboard your existing lead database, offline contacts, or event registrants using our interactive CSV importer and visual column mapping tool.",
     descriptionBottom:
-      'Equip counselors with a shared multi-agent WhatsApp team inbox so no student inquiry remains unanswered.',
-    icon: MessageCircle,
-    illustrationType: 'messaging',
-    logos: [<WhatsAppLogo key="whatsapp" />],
-  },
-  {
-    id: 'lead-import-mapping',
-    menuTitle: 'Lead Import & Mapping',
-    badge: 'Data Management',
-    title: 'Lead Import & Intelligent Field Mapping',
-    descriptionTop:
-      'Import offline walk-ins, seminar attendees, and education fair contacts seamlessly. Sync directly with live Google Sheets or upload CSV spreadsheets with our visual column-to-field mapper.',
-    descriptionBottom:
-      'Automatic data hygiene rules normalize phone numbers, validate email syntaxes, and tag custom acquisition source codes on upload.',
+      "Apply data hygiene checks during import to validate email formats, standardize mobile numbers, and attach custom source tags automatically.",
     icon: FileSpreadsheet,
-    illustrationType: 'import',
-    logos: [<GoogleSheetsLogo key="gsheets" />, <CsvImportLogo key="csv" />, <FieldMappingLogo key="fieldmap" />],
+    illustrationType: "import",
+    logos: [
+      <GoogleSheetsLogo key="gsheets" />,
+      <CsvImportLogo key="csv" />,
+      <FieldMappingLogo key="fieldmap" />,
+    ],
   },
   {
-    id: 'automation-plugin',
-    menuTitle: 'Automation Plugin',
-    badge: 'Workflows & Calendars',
-    title: 'Automation Plugins & Scheduling',
+    id: "automation-plugin",
+    menuTitle: "Automations & Routing",
+    badge: "Workflow Starter",
+    title: "Automated Lead Distribution & Scheduling",
     descriptionTop:
-      'Connect EnrollIQ to over 5,000+ apps with Zapier. Create automated event triggers such as creating calendar events, pushing data to internal data warehouses, or notifying Slack channels on high-priority lead conversion.',
+      "Streamline operations right from day one. Automatically route incoming leads using configurable round-robin distribution rules and create task reminders for prompt team follow-ups.",
     descriptionBottom:
-      'Embed Calendly directly into your applicant portal so prospective students can self-schedule 1-on-1 counseling and campus tour appointments.',
+      "Integrate calendar links to allow leads and applicants to self-schedule meetings or appointments directly into your team's schedule.",
     icon: Zap,
-    illustrationType: 'automation',
+    illustrationType: "automation",
     logos: [<ZapierLogo key="zapier" />, <CalendlyLogo key="calendly" />],
-  },
-  {
-    id: 'video-meeting-scheduler',
-    menuTitle: 'Video Meeting Scheduler',
-    badge: 'Interviews',
-    title: 'Video Meeting & Interview Scheduler',
-    descriptionTop:
-      'Generate dynamic Zoom, Google Meet, or Microsoft Teams meeting links automatically whenever a student or parent books a counseling slot or faculty interview.',
-    descriptionBottom:
-      'Include meeting access codes, calendar invites (.ics), and automated 1-hour pre-meeting reminders via WhatsApp.',
-    icon: Video,
-    illustrationType: 'meetings',
-    logos: [<ZoomMeetLogo key="zoom" />],
   },
 ];
 
@@ -593,7 +668,7 @@ export const serviceCategories: ServiceCategory[] = [
 
 export function ServiceIllustration({ type }: { type: string }) {
   switch (type) {
-    case 'social':
+    case "social":
       return (
         <div className="relative w-full max-w-[280px] h-[190px] flex items-center justify-center">
           {/* Ambient Glow */}
@@ -625,7 +700,7 @@ export function ServiceIllustration({ type }: { type: string }) {
         </div>
       );
 
-    case 'lead-gen':
+    case "lead-gen":
       return (
         <div className="relative w-full max-w-[280px] h-[190px] flex items-center justify-center">
           <div className="absolute inset-0 bg-orange-500/10 blur-2xl rounded-full" />
@@ -662,7 +737,7 @@ export function ServiceIllustration({ type }: { type: string }) {
         </div>
       );
 
-    case 'telephony':
+    case "telephony":
       return (
         <div className="relative w-full max-w-[280px] h-[190px] flex items-center justify-center">
           <div className="absolute inset-0 bg-red-500/10 blur-2xl rounded-full" />
@@ -672,13 +747,21 @@ export function ServiceIllustration({ type }: { type: string }) {
                 <div className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
                 Active Call
               </div>
-              <span className="text-[10px] font-mono text-slate-500">03:45</span>
+              <span className="text-[10px] font-mono text-slate-500">
+                03:45
+              </span>
             </div>
             {/* Audio Waveform visualization */}
             <div className="flex items-center justify-center gap-1 h-12 bg-red-50/60 rounded-xl px-3">
-              {[40, 70, 90, 30, 85, 100, 45, 60, 95, 80, 50, 65, 30, 75].map((h, idx) => (
-                <div key={idx} className="w-1.5 bg-[#D32F2F] rounded-full" style={{ height: `${h}%` }} />
-              ))}
+              {[40, 70, 90, 30, 85, 100, 45, 60, 95, 80, 50, 65, 30, 75].map(
+                (h, idx) => (
+                  <div
+                    key={idx}
+                    className="w-1.5 bg-[#D32F2F] rounded-full"
+                    style={{ height: `${h}%` }}
+                  />
+                ),
+              )}
             </div>
             <div className="flex items-center justify-between text-[10px] font-semibold text-slate-600">
               <span>Auto-Recorded</span>
@@ -688,14 +771,16 @@ export function ServiceIllustration({ type }: { type: string }) {
         </div>
       );
 
-    case 'ads':
+    case "ads":
       return (
         <div className="relative w-full max-w-[280px] h-[190px] flex items-center justify-center">
           <div className="absolute inset-0 bg-indigo-500/10 blur-2xl rounded-full" />
           <div className="relative w-full h-full bg-white rounded-2xl border border-indigo-100 shadow-sm p-4 flex flex-col justify-between">
             <div className="flex items-center justify-between text-xs font-bold text-indigo-900">
               <span>Campaign Attribution</span>
-              <span className="bg-indigo-50 text-indigo-600 px-2 py-0.5 rounded-full text-[10px]">ROAS 4.8x</span>
+              <span className="bg-indigo-50 text-indigo-600 px-2 py-0.5 rounded-full text-[10px]">
+                ROAS 4.8x
+              </span>
             </div>
             <div className="grid grid-cols-2 gap-2 my-auto">
               <div className="p-2 rounded-lg bg-blue-50/80 border border-blue-100">
@@ -719,7 +804,9 @@ export function ServiceIllustration({ type }: { type: string }) {
         <div className="relative w-full max-w-[280px] h-[190px] flex items-center justify-center">
           <div className="w-full h-full bg-gradient-to-br from-indigo-50/60 to-slate-50 rounded-2xl border border-slate-200/80 p-4 flex flex-col justify-between shadow-xs">
             <div className="flex items-center justify-between">
-              <span className="text-xs font-bold text-slate-700">EnrollIQ Verified Integration</span>
+              <span className="text-xs font-bold text-slate-700">
+                EnrollIQ Verified Integration
+              </span>
               <span className="w-2 h-2 rounded-full bg-emerald-500" />
             </div>
             <div className="flex items-center justify-center gap-2 my-auto">
@@ -727,7 +814,9 @@ export function ServiceIllustration({ type }: { type: string }) {
                 <CheckCircle2 className="w-8 h-8 text-[#2563EB]" />
               </div>
             </div>
-            <p className="text-[11px] text-center font-medium text-slate-500">Two-Way Real-Time API Sync</p>
+            <p className="text-[11px] text-center font-medium text-slate-500">
+              Two-Way Real-Time API Sync
+            </p>
           </div>
         </div>
       );
@@ -739,7 +828,7 @@ export function ServiceIllustration({ type }: { type: string }) {
 // ==========================================
 
 export default function ServicesTabs() {
-  const [activeTab, setActiveTab] = useState<string>('all');
+  const [activeTab, setActiveTab] = useState<string>("all");
 
   // Refs for scroll spy and direct scrolling
   const sectionRefs = useRef<Record<string, HTMLDivElement | null>>({});
@@ -751,12 +840,15 @@ export default function ServicesTabs() {
   useEffect(() => {
     const container = mobileTabsRef.current;
     if (!container) return;
-    const activeBtn = container.querySelector<HTMLButtonElement>(`[data-tab-id="${activeTab}"]`);
+    const activeBtn = container.querySelector<HTMLButtonElement>(
+      `[data-tab-id="${activeTab}"]`,
+    );
     if (!activeBtn) return;
     const containerRect = container.getBoundingClientRect();
     const btnRect = activeBtn.getBoundingClientRect();
-    const scrollLeft = activeBtn.offsetLeft - containerRect.width / 2 + btnRect.width / 2;
-    container.scrollTo({ left: scrollLeft, behavior: 'smooth' });
+    const scrollLeft =
+      activeBtn.offsetLeft - containerRect.width / 2 + btnRect.width / 2;
+    container.scrollTo({ left: scrollLeft, behavior: "smooth" });
   }, [activeTab]);
 
   // IntersectionObserver / Scroll Spy for active category tracking relative to window
@@ -775,7 +867,7 @@ export default function ServicesTabs() {
         },
         {
           root: null,
-          rootMargin: '-120px 0px -55% 0px',
+          rootMargin: "-120px 0px -55% 0px",
           threshold: 0,
         },
       );
@@ -794,17 +886,19 @@ export default function ServicesTabs() {
     setActiveTab(id);
     isUserClicking.current = true;
 
-    if (id === 'all') {
-      const section = document.getElementById('services-directory-section');
+    if (id === "all") {
+      const section = document.getElementById("services-directory-section");
       if (section) {
-        const topPos = section.getBoundingClientRect().top + window.scrollY - 80;
-        window.scrollTo({ top: Math.max(0, topPos), behavior: 'smooth' });
+        const topPos =
+          section.getBoundingClientRect().top + window.scrollY - 80;
+        window.scrollTo({ top: Math.max(0, topPos), behavior: "smooth" });
       }
     } else {
       const targetElement = sectionRefs.current[id];
       if (targetElement) {
-        const topPos = targetElement.getBoundingClientRect().top + window.scrollY - 100;
-        window.scrollTo({ top: Math.max(0, topPos), behavior: 'smooth' });
+        const topPos =
+          targetElement.getBoundingClientRect().top + window.scrollY - 100;
+        window.scrollTo({ top: Math.max(0, topPos), behavior: "smooth" });
       }
     }
 
@@ -823,7 +917,7 @@ export default function ServicesTabs() {
         className="absolute inset-0 opacity-[0.03] pointer-events-none overflow-hidden"
         style={{
           backgroundImage: `radial-gradient(#2563EB 1px, transparent 1px)`,
-          backgroundSize: '28px 28px',
+          backgroundSize: "28px 28px",
         }}
       />
       <div className="absolute top-1/4 left-10 w-[500px] h-[500px] bg-blue-500/5 blur-[140px] rounded-full pointer-events-none overflow-hidden" />
@@ -842,8 +936,9 @@ export default function ServicesTabs() {
           </h2>
 
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
-            From social ad capturing to cloud telephony, WhatsApp chatbots, and government verification gateways —
-            seamless two-way data flow with zero manual effort.
+            From social ad capturing to cloud telephony, WhatsApp chatbots, and
+            government verification gateways — seamless two-way data flow with
+            zero manual effort.
           </p>
         </div>
 
@@ -855,18 +950,6 @@ export default function ServicesTabs() {
             ref={mobileTabsRef}
             className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
           >
-            <button
-              type="button"
-              data-tab-id="all"
-              onClick={() => handleCategoryClick('all')}
-              className={`shrink-0 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
-                activeTab === 'all'
-                  ? 'bg-[#2563EB] text-white shadow-xs'
-                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-              }`}
-            >
-              All
-            </button>
             {serviceCategories.map((cat) => (
               <button
                 key={cat.id}
@@ -875,8 +958,8 @@ export default function ServicesTabs() {
                 onClick={() => handleCategoryClick(cat.id)}
                 className={`shrink-0 px-3.5 py-1.5 rounded-lg text-xs font-bold whitespace-nowrap transition-all cursor-pointer ${
                   activeTab === cat.id
-                    ? 'bg-[#2563EB] text-white shadow-xs'
-                    : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                    ? "bg-[#2563EB] text-white shadow-xs"
+                    : "bg-slate-100 text-slate-700 hover:bg-slate-200"
                 }`}
               >
                 {cat.menuTitle}
@@ -894,20 +977,6 @@ export default function ServicesTabs() {
               ref={sidebarContainerRef}
               className="bg-white rounded-2xl border border-slate-200/90 shadow-xs overflow-hidden divide-y divide-slate-100 max-h-[calc(100vh-120px)] overflow-y-auto scrollbar-none [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
             >
-              {/* "All" button with solid blue active state */}
-              <button
-                type="button"
-                id="tab-btn-all"
-                onClick={() => handleCategoryClick('all')}
-                className={`w-full text-left px-5 py-3 text-sm font-semibold transition-all cursor-pointer flex items-center justify-between ${
-                  activeTab === 'all'
-                    ? 'bg-[#2563EB] text-white font-bold'
-                    : 'text-slate-700 hover:bg-slate-50 hover:text-slate-900'
-                }`}
-              >
-                <span>All</span>
-              </button>
-
               {/* All category list items */}
               {serviceCategories.map((cat) => {
                 const isActive = activeTab === cat.id;
@@ -919,16 +988,16 @@ export default function ServicesTabs() {
                     onClick={() => handleCategoryClick(cat.id)}
                     className={`w-full text-left px-5 py-3 text-sm transition-all cursor-pointer flex items-center justify-between group ${
                       isActive
-                        ? 'bg-[#2563EB] text-white font-bold shadow-xs'
-                        : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900 font-medium'
+                        ? "bg-[#2563EB] text-white font-bold shadow-xs"
+                        : "text-slate-600 hover:bg-slate-50 hover:text-slate-900 font-medium"
                     }`}
                   >
                     <span className="truncate pr-2">{cat.menuTitle}</span>
                     <ArrowRight
                       className={`w-3.5 h-3.5 shrink-0 transition-transform ${
                         isActive
-                          ? 'text-white translate-x-0.5'
-                          : 'text-slate-400 group-hover:text-slate-600 opacity-0 group-hover:opacity-100'
+                          ? "text-white translate-x-0.5"
+                          : "text-slate-400 group-hover:text-slate-600 opacity-0 group-hover:opacity-100"
                       }`}
                     />
                   </button>
@@ -951,7 +1020,7 @@ export default function ServicesTabs() {
                     sectionRefs.current[cat.id] = el;
                   }}
                   className={`scroll-mt-24 space-y-6 pb-16 sm:pb-20 border-b border-slate-200/80 last:border-b-0 ${
-                    index > 0 ? 'pt-12 sm:pt-16' : 'pt-0'
+                    index > 0 ? "pt-12 sm:pt-16" : "pt-0"
                   }`}
                 >
                   {/* Content Section: Title & Description */}
@@ -965,10 +1034,14 @@ export default function ServicesTabs() {
                       {cat.title}
                     </h3>
 
-                    <p className="text-sm sm:text-base text-slate-700 leading-relaxed">{cat.descriptionTop}</p>
+                    <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
+                      {cat.descriptionTop}
+                    </p>
 
                     {cat.descriptionBottom && (
-                      <p className="text-sm sm:text-base text-slate-700 leading-relaxed">{cat.descriptionBottom}</p>
+                      <p className="text-sm sm:text-base text-slate-700 leading-relaxed">
+                        {cat.descriptionBottom}
+                      </p>
                     )}
                   </div>
 
