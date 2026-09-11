@@ -579,7 +579,7 @@ export const serviceCategories: ServiceCategory[] = [
     badge: "Voice & Call Logging",
     title: "Cloud Telephony & Call Management",
     descriptionTop:
-      "Equip your sales or admissions team with click-to-call functionality straight from the contact record. Track inbound and outbound calls with essential details like duration and disposition tags.",
+      "Streamline student communication with instant click-to-call functionality integrated into student records. Log call durations, counselor notes, and disposition status in real time",
     descriptionBottom:
       "Integrate enterprise cloud telephony providers like MyOperator and TeleCMI to centralize call records and maintain detailed activity histories for every lead.",
     icon: PhoneCall,
@@ -653,7 +653,7 @@ export const serviceCategories: ServiceCategory[] = [
     badge: "Workflow Starter",
     title: "Automated Lead Distribution & Scheduling",
     descriptionTop:
-      "Streamline operations right from day one. Automatically route incoming leads using configurable round-robin distribution rules and create task reminders for prompt team follow-ups.",
+      "Streamline admission operations from day one. Dynamically route incoming leads using configurable Round-Robin, Load-Balanced, or Random distribution rules, accompanied by automated task reminders for counselors.",
     descriptionBottom:
       "Integrate calendar links to allow leads and applicants to self-schedule meetings or appointments directly into your team's schedule.",
     icon: Zap,
@@ -936,9 +936,9 @@ export default function ServicesTabs() {
           </h2>
 
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
-            From social ad capturing to cloud telephony, WhatsApp chatbots, and
-            government verification gateways — seamless two-way data flow with
-            zero manual effort.
+            From social ad capture and publisher APIs to cloud telephony and
+            automated lead imports — EnrollIQ enables seamless, real-time
+            two-way data flow with zero manual effort
           </p>
         </div>
 
