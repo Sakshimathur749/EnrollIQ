@@ -11,7 +11,6 @@ interface EduFooterProps {
 
 export function EduFooter({ onOpenDemo }: EduFooterProps) {
   const quickLinks = [
-    { name: "Home", href: "/" },
     { name: "About", href: "/solutions" },
     { name: "Service", href: "/services" },
     { name: "Contact", href: "/contact" },
@@ -63,15 +62,11 @@ export function EduFooter({ onOpenDemo }: EduFooterProps) {
             </Link>
 
             <p className="text-sm text-slate-600 leading-relaxed max-w-md">
-              Powering smarter CRM and stronger growth for modern educational
-              institutions worldwide. Streamline your sales pipeline, engage
-              leads, and close enrollments effortlessly.
+              Powering end-to-end enrollment management for modern educational
+              institutions. Capture leads from Meta, Google, and publishers,
+              manage custom forms and workflows, and auto-allocate leads to
+              counselors seamlessly.
             </p>
-
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F3E8FF] border border-purple-200 text-xs font-semibold text-[#7E22CE] shadow-2xs">
-              <Sparkles className="w-3.5 h-3.5 text-amber-500 fill-amber-400" />
-              <span>Next-Gen AI CRM Platform</span>
-            </div>
           </motion.div>
 
           {/* Column 2: Quick Links (Span 3 on md/lg) */}
@@ -94,7 +89,6 @@ export function EduFooter({ onOpenDemo }: EduFooterProps) {
                       href={link.href}
                       className="group flex items-center gap-2 text-slate-600 hover:text-[#4F46E5] font-medium transition-all duration-200"
                     >
-                      <span className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-[#4F46E5] group-hover:scale-125 transition-all" />
                       <span>{link.name}</span>
                       <ArrowUpRight className="w-3.5 h-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-[#4F46E5]" />
                     </Link>
@@ -122,7 +116,7 @@ export function EduFooter({ onOpenDemo }: EduFooterProps) {
                 className="group flex items-center gap-3 text-slate-600 hover:text-[#4F46E5] transition-colors"
                 id="footer-email-link"
               >
-                <div className="w-8 h-8 rounded-lg bg-indigo-50 group-hover:bg-indigo-100/70 border border-indigo-100 flex items-center justify-center text-[#4F46E5] group-hover:scale-110 transition-transform shadow-2xs">
+                <div className="w-8 h-8 rounded-lg bg-slate-50 group-hover:bg-indigo-50 border border-slate-200/80 group-hover:border-indigo-200 flex items-center justify-center text-slate-500 group-hover:text-[#4F46E5] group-hover:scale-110 transition-transform shadow-2xs">
                   <Mail className="w-4 h-4" />
                 </div>
                 <span className="font-medium text-slate-700 group-hover:text-[#4F46E5] transition-colors">
@@ -131,11 +125,20 @@ export function EduFooter({ onOpenDemo }: EduFooterProps) {
               </a>
 
               <div className="flex items-center gap-3 text-slate-600 group">
-                <div className="w-8 h-8 rounded-lg bg-slate-50 group-hover:bg-indigo-50 border border-slate-200/80 group-hover:border-indigo-200 flex items-center justify-center text-slate-500 group-hover:text-[#4F46E5] transition-colors shadow-2xs">
+                <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-slate-50 group-hover:bg-indigo-50 border border-slate-200/80 group-hover:border-indigo-200 flex items-center justify-center text-slate-500 group-hover:text-[#4F46E5] transition-colors shadow-2xs">
+                  <MapPin className="w-4 h-4 " />
+                </div>
+                <span className="font-medium text-slate-700">
+                  142, Pal Rd, near Amargarh Resort, Ravi Nagar, Bhadu Market,
+                  Jodhpur, Rajasthan 342001
+                </span>
+              </div>
+              <div className="flex items-center gap-3 text-slate-600 group">
+                <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-slate-50 group-hover:bg-indigo-50 border border-slate-200/80 group-hover:border-indigo-200 flex items-center justify-center text-slate-500 group-hover:text-[#4F46E5] transition-colors shadow-2xs">
                   <MapPin className="w-4 h-4" />
                 </div>
                 <span className="font-medium text-slate-700">
-                  Mumbai, India
+                  Bengaluru, Karnataka, India{" "}
                 </span>
               </div>
             </div>
@@ -148,7 +151,7 @@ export function EduFooter({ onOpenDemo }: EduFooterProps) {
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-6 text-center">
           <p className="text-xs sm:text-sm text-slate-500 font-medium tracking-wide">
             &copy; 2026 ENROLLIQ TECHNOLOGIES PRIVATE LIMITED. All rights
-            reserved.
+            reserved a product of Mediagarh technosoft Pvt Ltd.
           </p>
         </div>
       </div>

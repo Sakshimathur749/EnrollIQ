@@ -11,7 +11,6 @@ interface EduFooterProps {
 
 export function EduFooter({ onOpenDemo }: EduFooterProps) {
   const quickLinks = [
-    { name: "Home", href: "/" },
     { name: "About", href: "/solutions" },
     { name: "Service", href: "/services" },
     { name: "Contact", href: "/contact" },
@@ -67,11 +66,7 @@ export function EduFooter({ onOpenDemo }: EduFooterProps) {
               institutions worldwide. Streamline your sales pipeline, engage
               leads, and close enrollments effortlessly.
             </p>
-
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F3E8FF] border border-purple-200 text-xs font-semibold text-[#7E22CE] shadow-2xs">
-              <Sparkles className="w-3.5 h-3.5 text-amber-500 fill-amber-400" />
-              <span>Next-Gen AI CRM Platform</span>
-            </div>
+ 
           </motion.div>
 
           {/* Column 2: Quick Links (Span 3 on md/lg) */}
@@ -104,8 +99,7 @@ export function EduFooter({ onOpenDemo }: EduFooterProps) {
                       href={link.href}
                       className="group flex items-center gap-2 text-slate-600 hover:text-[#4F46E5] font-medium transition-all duration-200"
                     >
-                      <span className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-[#4F46E5] group-hover:scale-125 transition-all" />
-                      <span>{link.name}</span>
+                     <span>{link.name}</span>
                       <ArrowUpRight className="w-3.5 h-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all text-[#4F46E5]" />
                     </Link>
                   )}

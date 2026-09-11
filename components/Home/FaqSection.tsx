@@ -10,57 +10,101 @@ interface FaqItem {
   answer: string;
 }
 
+// const FAQ_DATA: FaqItem[] = [
+//   {
+//     id: "faq-1",
+//     question: "How quickly can our team get started with EnrollIQ?",
+//     answer:
+//       "You can be up and running in less than 10 minutes. EnrollIQ offers one-click integrations with Google Ads, Meta, and website forms. Our guided onboarding wizard helps you import historical contacts and configure your sales pipeline with zero downtime.",
+//   },
+//   {
+//     id: "faq-2",
+//     question: "How does AI lead scoring and auto-allocation work?",
+//     answer:
+//       "EnrollIQ analyzes lead source, intent signals, location, and engagement patterns in real-time. Leads are assigned an algorithmic score (0-100) and automatically routed to the best-suited sales rep or counselor based on round-robin rules, availability, or language skills.",
+//   },
+//   {
+//     id: "faq-3",
+//     question: "Does EnrollIQ integrate with our existing tools and CRM?",
+//     answer:
+//       "Yes! EnrollIQ natively connects with 100+ platforms including Google Ads, Facebook & Instagram Leads, WhatsApp Business API, HubSpot, Salesforce, Zapier, QuickBooks, Stripe, and telephony providers like Exotel, MCube, and Twilio.",
+//   },
+//   {
+//     id: "faq-5",
+//     question: "Can we import our existing student or customer contacts?",
+//     answer:
+//       "Absolutely. EnrollIQ supports seamless CSV/Excel bulk imports, API data pipelines, and automatic field-mapping. Our migration specialist team is also available to assist with enterprise database migrations free of charge.",
+//   },
+//   {
+//     id: "faq-6",
+//     question: "How secure is our business and student data?",
+//     answer:
+//       "EnrollIQ is ISO 27001 certified and GDPR compliant. All data is encrypted with AES-256 at rest and TLS 1.3 in transit. We support role-based access control (RBAC), multi-factor authentication (MFA), and automated daily backups.",
+//   },
+//   {
+//     id: "faq-8",
+//     question: "What kind of support is provided after onboarding?",
+//     answer:
+//       "All plans include 24/7 email and chat support. Growth and Enterprise plans receive dedicated account managers, 1-hour priority response SLAs, and custom team training workshops.",
+//   },
+// ];
 const FAQ_DATA: FaqItem[] = [
   {
     id: "faq-1",
-    question: "How quickly can our team get started with EnrollIQ?",
+    question: "What can be managed with EnrollIQ?",
     answer:
-      "You can be up and running in less than 10 minutes. EnrollIQ offers one-click integrations with Google Ads, Meta, and website forms. Our guided onboarding wizard helps you import historical contacts and configure your sales pipeline with zero downtime.",
+      "EnrollIQ provides a centralized platform for managing the complete lead journey. Lead sources, leads, forms, campaigns, counselor allocation, integrations, communication, imports, and automation can all be managed from one CRM.",
   },
+
   {
     id: "faq-2",
-    question: "How does AI lead scoring and auto-allocation work?",
+    question: "Can lead sources be created and managed in EnrollIQ?",
     answer:
-      "EnrollIQ analyzes lead source, intent signals, location, and engagement patterns in real-time. Leads are assigned an algorithmic score (0-100) and automatically routed to the best-suited sales rep or counselor based on round-robin rules, availability, or language skills.",
+      "Yes. EnrollIQ allows lead sources such as Google, Meta, publishers api, and other channels to be created, edited, and managed from one place. Lead source information remains connected to the respective leads for better tracking and management.",
   },
+
   {
     id: "faq-3",
-    question: "Does EnrollIQ integrate with our existing tools and CRM?",
+    question: "Can custom forms and lead fields be created?",
     answer:
-      "Yes! EnrollIQ natively connects with 100+ platforms including Google Ads, Facebook & Instagram Leads, WhatsApp Business API, HubSpot, Salesforce, Zapier, QuickBooks, Stripe, and telephony providers like Exotel, MCube, and Twilio.",
+      "Yes. EnrollIQ supports the creation and management of registration forms and student application forms. Dynamic lead fields can also be created to capture the specific information required for different lead management processes.",
   },
+
   {
     id: "faq-4",
-    question: "Is there a free trial available, and is a credit card required?",
+    question: "Does EnrollIQ provide campaign management and reporting?",
     answer:
-      "We provide a comprehensive 14-day free trial with full access to all standard and AI features. No credit card is required to sign up. You can explore the dashboard, test integrations, and invite your entire team.",
+      "Yes. EnrollIQ includes Campaign Manager and a Campaign Dashboard for creating and managing campaigns, tracking campaign-generated leads, and gaining visibility into lead generation performance across different sources and campaigns.",
   },
+
   {
     id: "faq-5",
-    question: "Can we import our existing student or customer contacts?",
+    question: "Which platforms and tools can be integrated with EnrollIQ?",
     answer:
-      "Absolutely. EnrollIQ supports seamless CSV/Excel bulk imports, API data pipelines, and automatic field-mapping. Our migration specialist team is also available to assist with enterprise database migrations free of charge.",
+      "EnrollIQ supports integrations across publishers api, telephony, advertising, email, messaging, and automation. Available integrations include Shiksha, CollegeDunia, Edustoke, MyOperator, TeleCMI, Google Ads, Google My Business, Meta Instant Forms, Meta Conversions API, AWS SES,  Zapier, and Calendly.",
   },
+
   {
     id: "faq-6",
-    question: "How secure is our business and student data?",
+    question: "Can existing leads be imported into EnrollIQ?",
     answer:
-      "EnrollIQ is ISO 27001 certified and GDPR compliant. All data is encrypted with AES-256 at rest and TLS 1.3 in transit. We support role-based access control (RBAC), multi-factor authentication (MFA), and automated daily backups.",
+      "Yes. Existing leads can be imported through Google Sheets and CSV files. Import field mapping allows existing data fields to be matched with the appropriate CRM fields before the leads are added to EnrollIQ.",
   },
+
   {
     id: "faq-7",
-    question: "Can we automate WhatsApp, Email, and SMS drip campaigns?",
+    question: "Can leads be allocated and transferred between counselors?",
     answer:
-      "Yes. You can build visual multi-channel workflows triggered by lead status, form submissions, or counselor notes. Send automated brochures, appointment reminders, and follow-ups through official WhatsApp Business APIs with detailed delivery and read receipts.",
+      "Yes. EnrollIQ supports lead allocation and transfer between counselors and teams. Lead ownership can be managed efficiently, helping ensure that leads reach the appropriate counselor for timely follow-up.",
   },
+
   {
     id: "faq-8",
-    question: "What kind of support is provided after onboarding?",
+    question: "Does EnrollIQ support  email, and telephony?",
     answer:
-      "All plans include 24/7 email and chat support. Growth and Enterprise plans receive dedicated account managers, 1-hour priority response SLAs, and custom team training workshops.",
+      "Yes. EnrollIQ connects communication channels with the lead management workflow through  AWS SES for email, and telephony platforms such as MyOperator and TeleCMI. This keeps lead communication and follow-ups connected with the CRM.",
   },
 ];
-
 export function FaqSection() {
   const [openId, setOpenId] = useState<string | null>("faq-1");
 

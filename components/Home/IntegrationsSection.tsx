@@ -14,6 +14,9 @@ import {
   Search,
   ChevronRight,
   Layers,
+  Phone,
+  Mail,
+  FileSpreadsheet,
 } from "lucide-react";
 
 interface ProductItem {
@@ -36,94 +39,101 @@ export function IntegrationsSection() {
 
   const products: ProductItem[] = [
     {
-      id: "lead-management-system",
-      name: "Lead Management System",
+      id: "publisher-apis",
+      name: "Publisher APIs Integration",
       category: "acquisition",
-      tagline: "360° Lead Pipeline",
-      description: "Capture and auto-distribute student inquiries instantly.",
-      icon: Users,
-      iconColor: "text-[#2563EB]",
-      iconBg: "bg-blue-50 border-blue-100/80",
-      hoverColor: "group-hover:text-[#2563EB]",
-      badge: "Zero Leakage",
-      linkUrl: "/services",
-    },
-    {
-      id: "lead-nurturing",
-      name: "Lead Nurturing",
-      category: "engagement",
-      tagline: "Multi-Channel Journeys",
-      description: "Automate personalized WhatsApp and email journeys.",
-      icon: MessageSquare,
-      iconColor: "text-[#059669]",
-      iconBg: "bg-emerald-50 border-emerald-100/80",
-      hoverColor: "group-hover:text-[#059669]",
-      badge: "4.8x Conversion",
-      linkUrl: "/services",
-    },
-    {
-      id: "campaign-management",
-      name: "Campaign Management",
-      category: "acquisition",
-      tagline: "Multi-Source Attribution",
-      description: "Track multi-channel ad campaigns and ROI.",
-      icon: Megaphone,
-      iconColor: "text-[#E11D48]",
-      iconBg: "bg-rose-50 border-rose-100/80",
-      hoverColor: "group-hover:text-[#E11D48]",
-      badge: "Multi-Touch ROI",
-      linkUrl: "/services",
-    },
-    {
-      id: "marketing-automation",
-      name: "Marketing Automation",
-      category: "engagement",
-      tagline: "Visual Workflow Builder",
-      description: "Build visual admission workflows without code.",
-      icon: Workflow,
-      iconColor: "text-[#D97706]",
-      iconBg: "bg-amber-50 border-amber-100/80",
-      hoverColor: "group-hover:text-[#D97706]",
-      badge: "No-Code Engine",
-      linkUrl: "/services",
-    },
-    {
-      id: "user-management",
-      name: "User Management",
-      category: "operations",
-      tagline: "Granular Role Governance",
-      description: "Control counselor permissions with audit logs.",
-      icon: ShieldCheck,
-      iconColor: "text-[#4F46E5]",
-      iconBg: "bg-indigo-50 border-indigo-100/80",
-      hoverColor: "group-hover:text-[#4F46E5]",
-      badge: "RBAC Security",
-      linkUrl: "/services",
-    },
-    {
-      id: "publisher-panel",
-      name: "Publisher Panel",
-      category: "acquisition",
-      tagline: "Partner Portals",
-      description: "Direct partner lead ingestion and validation.",
+      tagline: "Direct Lead Ingestion",
+      description:
+        "Seamless real-time integration with Shiksha, CollegeDunia, and Edustoke.",
       icon: Globe,
       iconColor: "text-[#0284C7]",
       iconBg: "bg-sky-50 border-sky-100/80",
       hoverColor: "group-hover:text-[#0284C7]",
-      badge: "Partner Portal",
+      badge: "Verified Ingestion",
       linkUrl: "/services",
     },
     {
-      id: "advance-form-builder",
-      name: "Advance Form Builder",
+      id: "ads-integration",
+      name: "Ads & Social Connect",
+      category: "acquisition",
+      tagline: "Multi-Platform Ad Sync",
+      description:
+        "Connect Google Ads, GMB, Meta Instant Forms, and Meta Conversions API.",
+      icon: Megaphone,
+      iconColor: "text-[#E11D48]",
+      iconBg: "bg-rose-50 border-rose-100/80",
+      hoverColor: "group-hover:text-[#E11D48]",
+      badge: "Instant Ad Sync",
+      linkUrl: "/services",
+    },
+    {
+      id: "telephony-integration",
+      name: "Telephony Integration",
       category: "engagement",
-      tagline: "Multi-Step Portals",
-      description: "Multi-step admission forms with OTP verification.",
-      icon: FileText,
+      tagline: "Smart Calling Hub",
+      description:
+        "Cloud telephony integration with MyOperator and TeleCMI for instant calls.",
+      icon: Phone, // Import 'Phone' icon from lucide-react
+      iconColor: "text-[#2563EB]",
+      iconBg: "bg-blue-50 border-blue-100/80",
+      hoverColor: "group-hover:text-[#2563EB]",
+      badge: "Click-to-Call",
+      linkUrl: "/services",
+    },
+    {
+      id: "messaging-connect",
+      name: "WhatsApp Business Hub",
+      category: "engagement",
+      tagline: "Direct Student Messaging",
+      description:
+        "Send automated and bulk WhatsApp updates directly from your CRM.",
+      icon: MessageSquare,
+      iconColor: "text-[#059669]",
+      iconBg: "bg-emerald-50 border-emerald-100/80",
+      hoverColor: "group-hover:text-[#059669]",
+      badge: "WhatsApp Official",
+      linkUrl: "/services",
+    },
+    {
+      id: "email-connect",
+      name: "Email Campaigns & AWS SES",
+      category: "engagement",
+      tagline: "High-Deliverability Email",
+      description:
+        "Automate bulk email campaigns backed by reliable AWS SES infrastructure.",
+      icon: Mail, // Import 'Mail' icon from lucide-react
+      iconColor: "text-[#D97706]",
+      iconBg: "bg-amber-50 border-amber-100/80",
+      hoverColor: "group-hover:text-[#D97706]",
+      badge: "AWS SES Powered",
+      linkUrl: "/services",
+    },
+    {
+      id: "leads-import",
+      name: "Lead Import & Field Mapping",
+      category: "operations",
+      tagline: "Smart Data Ingestion",
+      description:
+        "Import leads easily from Google Sheets or CSV files with dynamic field mapping.",
+      icon: FileSpreadsheet, // Import 'FileSpreadsheet' icon from lucide-react
       iconColor: "text-[#0D9488]",
       iconBg: "bg-teal-50 border-teal-100/80",
       hoverColor: "group-hover:text-[#0D9488]",
-      badge: "Smart Logic",
+      badge: "Bulk Upload",
+      linkUrl: "/services",
+    },
+    {
+      id: "workflow-automation",
+      name: "Workflow & App Automation",
+      category: "operations",
+      tagline: "Third-Party Connectors",
+      description:
+        "Connect your favorite tools seamlessly via Zapier and Calendly integrations.",
+      icon: Workflow,
+      iconColor: "text-[#4F46E5]",
+      iconBg: "bg-indigo-50 border-indigo-100/80",
+      hoverColor: "group-hover:text-[#4F46E5]",
+      badge: "Zapier & Calendly",
       linkUrl: "/services",
     },
     {
@@ -131,22 +141,23 @@ export function IntegrationsSection() {
       name: "Application Reports & Analytics",
       category: "analytics",
       tagline: "BI & Funnel Intelligence",
-      description: "Real-time BI dashboards and funnel reports.",
+      description:
+        "Real-time admission performance dashboards and channel conversion reports.",
       icon: BarChart3,
       iconColor: "text-[#9333EA]",
       iconBg: "bg-purple-50 border-purple-100/80",
       hoverColor: "group-hover:text-[#9333EA]",
-      badge: "Executive BI",
+      badge: "Real-Time BI",
       linkUrl: "/services",
     },
   ];
 
   const categories = [
-    { id: "all", label: "All Products" },
-    { id: "acquisition", label: "Acquisition" },
-    { id: "engagement", label: "Nurturing & Automation" },
-    { id: "operations", label: "Operations & Governance" },
-    { id: "analytics", label: "Analytics" },
+    { id: "all", label: "All Integrations" },
+    { id: "acquisition", label: "Lead Sources & Ads" },
+    { id: "engagement", label: "Telephony & Messaging" },
+    { id: "operations", label: "Imports & Automations" },
+    { id: "analytics", label: "Analytics & Reports" },
   ];
 
   const filteredProducts = products.filter((item) => {
@@ -187,9 +198,9 @@ export function IntegrationsSection() {
           </h2>
 
           <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
-            From student lead acquisition to multi-channel nurturing and BI
-            analytics—explore our 8 core enterprise modules designed for modern
-            institutions.
+            From instant lead capture and automated tracking to seamless app
+            integrations and AI insights—explore the core modules driving higher
+            conversions for modern institutions.
           </p>
         </div>
 

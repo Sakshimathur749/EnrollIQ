@@ -283,7 +283,9 @@ export function EduNavbar({ onOpenDemo }: EduNavbarProps) {
           {/* 3. Right Action: Login Button */}
           <div className="hidden sm:flex items-center gap-3">
             <Link
-              href="/login"
+              href="https://crm.mediagarh.com/CRM/login"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-6 py-2 rounded-xl text-sm font-semibold text-white bg-[#4F46E5] hover:bg-[#4338CA] shadow-sm shadow-indigo-500/25 hover:shadow-md hover:shadow-indigo-500/35 transition-all flex items-center gap-2"
               id="nav-login-btn"
             >
@@ -317,9 +319,9 @@ export function EduNavbar({ onOpenDemo }: EduNavbarProps) {
           </div>
         </div>
 
-        {/* Mobile Navigation Drawer */}
+        {/* Mobile Navigation Drawer (Absolute Floating Overlay) */}
         {mobileMenuOpen && (
-          <div className="md:hidden mt-3 pt-3 pb-5 border-t border-slate-100 space-y-3 animate-in fade-in slide-in-from-top-2 duration-200 bg-white">
+          <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-xl border-b border-slate-100 px-4 pt-3 pb-5 space-y-3 animate-in fade-in slide-in-from-top-2 duration-200 z-50">
             <div className="grid grid-cols-1 gap-1">
               <Link
                 href="/"
@@ -344,6 +346,7 @@ export function EduNavbar({ onOpenDemo }: EduNavbarProps) {
               >
                 About
               </Link>
+
               <Link
                 href="/services"
                 onClick={() => setMobileMenuOpen(false)}
@@ -355,34 +358,6 @@ export function EduNavbar({ onOpenDemo }: EduNavbarProps) {
               >
                 Service
               </Link>
-              {/* Product items in mobile menu */}
-              {/* <div className="pt-2 pb-1 px-3 text-xs font-bold text-slate-400 uppercase tracking-wider">
-                Service
-              </div>
-
-              {productItems.map((item) => {
-                const Icon = item.icon;
-                return (
-                  <Link
-                    key={item.title}
-                    href={item.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="p-2.5 rounded-xl flex items-center gap-3 hover:bg-slate-50 text-slate-700"
-                  >
-                    <div className="w-8 h-8 rounded-lg bg-[#EEF2FF] text-[#4F46E5] flex items-center justify-center shrink-0">
-                      <Icon className="w-4 h-4" />
-                    </div>
-                    <div>
-                      <div className="text-xs font-bold text-slate-900">
-                        {item.title}
-                      </div>
-                      <div className="text-[11px] text-slate-500">
-                        {item.subtitle}
-                      </div>
-                    </div>
-                  </Link>
-                );
-              })} */}
 
               <Link
                 href="/contact"
@@ -399,7 +374,9 @@ export function EduNavbar({ onOpenDemo }: EduNavbarProps) {
 
             <div className="pt-2 border-t border-slate-100">
               <Link
-                href="/login"
+                href="https://crm.mediagarh.com/CRM/login"
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setMobileMenuOpen(false)}
                 className="w-full py-3 rounded-xl text-center font-bold text-white bg-[#4F46E5] hover:bg-[#4338CA] shadow-md shadow-indigo-500/20 flex items-center justify-center gap-2"
                 id="mobile-drawer-login-btn"
