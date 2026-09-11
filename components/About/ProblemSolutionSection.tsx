@@ -72,9 +72,9 @@ export function ProblemSolutionSection() {
             Designed to Fix Educational Admission Bottlenecks
           </h2>
           <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl mx-auto">
-            Traditional CRMs were built for sales reps, not admission teams.
-            Discover how EnrollIQ unifies your ad sources, counselor workflows,
-            and telephony in one platform.
+            Upgrade from generic sales tools to EnrollIQ—a digital CRM built for
+            admissions that seamlessly integrates marketing channels, counselor
+            workflows, and telephony.
           </p>
         </div>
 

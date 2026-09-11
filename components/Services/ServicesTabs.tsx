@@ -418,7 +418,7 @@ export function GoogleSheetsLogo() {
           d="M13 21.5H27M13 25H27M18 18V29M22 18V29"
           stroke="#0F9D58"
           strokeWidth="1"
-          stroke-linecap="round"
+          strokeLinecap="round"
         />
       </svg>
       <div className="flex flex-col">

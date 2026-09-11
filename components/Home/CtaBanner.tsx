@@ -83,9 +83,9 @@ export function CtaBanner({ onOpenDemo }: CtaBannerProps) {
             className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed"
             suppressHydrationWarning
           >
-            Connect all your ad sources, publisher APIs, and telephony in one
-            place. Build dynamic forms, track live campaign ROI, and
-            auto-allocate leads to counselors instantly.
+            Connect ad sources, publisher APIs, and telephony in one place.
+            Build dynamic forms, track live campaign ROI, and auto-allocate
+            leads to counselors instantly
           </motion.p>
 
           {/* CTA Buttons: Contact Us & Login */}

@@ -2,7 +2,15 @@
 
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Zap, Share2, Layers, BarChart3, Users, Workflow } from "lucide-react";
+import {
+  Zap,
+  Share2,
+  Layers,
+  BarChart3,
+  Users,
+  Workflow,
+  Sparkles,
+} from "lucide-react";
 
 const pillars = [
   {
@@ -20,7 +28,7 @@ const pillars = [
     title: "Automated Lead Routing",
     subtitle: "Fair & Smart Distribution",
     description:
-      "Assign incoming leads dynamically to counselors based on language, course preference, geography, or round-robin capacity rules.",
+      "Distribute leads to counselors using Round-Robin, Load-Balanced, or Random allocation rules mapped to language, course preference, and regional context",
     badge: "Operational Efficiency",
     badgeColor: "bg-blue-50 text-blue-700 border-blue-200/80",
     iconBg: "bg-blue-500/10 text-blue-600 border-blue-200",
@@ -88,16 +96,17 @@ export default function PlatformPillarsSection() {
           transition={{ duration: 0.55 }}
           className="mx-auto mb-16 max-w-3xl text-center space-y-3"
         >
-          <p className="text-xs font-bold uppercase tracking-widest text-[#4F46E5]">
-            Core Platform Pillars
-          </p>
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-[#4F46E5] bg-indigo-50 border border-indigo-200/80 shadow-2xs">
+            <Sparkles className="w-3.5 h-3.5 text-[#4F46E5]" />
+            <span>Core Platform Pillars</span>
+          </div>
           <h2 className="text-3xl font-heading font-black tracking-tight text-[#0F172A] sm:text-4xl">
             What We Stand For
           </h2>
           <p className="text-base text-slate-600 leading-relaxed">
-            EnrollIQ is engineered to give educational institutions full
-            visibility, total automation, and faster student engagement from
-            first click to enrollment.
+            EnrollIQ is a purpose-built admission CRM that delivers total
+            campaign visibility, smart automation, and faster student conversion
+            from inquiry to enrollment
           </p>
         </motion.div>
 

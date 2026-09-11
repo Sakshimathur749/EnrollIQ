@@ -151,7 +151,7 @@ export function EduFooter({ onOpenDemo }: EduFooterProps) {
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-6 text-center">
           <p className="text-xs sm:text-sm text-slate-500 font-medium tracking-wide">
             &copy; 2026 ENROLLIQ TECHNOLOGIES PRIVATE LIMITED. All rights
-            reserved a product of Mediagarh technosoft Pvt Ltd.
+            reserved. A product of Mediagarh Technosoft Pvt. Ltd.
           </p>
         </div>
       </div>
