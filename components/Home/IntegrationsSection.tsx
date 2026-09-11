@@ -17,6 +17,7 @@ import {
   Phone,
   Mail,
   FileSpreadsheet,
+  ArrowRight,
 } from "lucide-react";
 
 interface ProductItem {
@@ -73,25 +74,11 @@ export function IntegrationsSection() {
       tagline: "Smart Calling Hub",
       description:
         "Cloud telephony integration with MyOperator and TeleCMI for instant calls.",
-      icon: Phone, // Import 'Phone' icon from lucide-react
+      icon: Phone,
       iconColor: "text-[#2563EB]",
       iconBg: "bg-blue-50 border-blue-100/80",
       hoverColor: "group-hover:text-[#2563EB]",
       badge: "Click-to-Call",
-      linkUrl: "/services",
-    },
-    {
-      id: "messaging-connect",
-      name: "WhatsApp Business Hub",
-      category: "engagement",
-      tagline: "Direct Student Messaging",
-      description:
-        "Send automated and bulk WhatsApp updates directly from your CRM.",
-      icon: MessageSquare,
-      iconColor: "text-[#059669]",
-      iconBg: "bg-emerald-50 border-emerald-100/80",
-      hoverColor: "group-hover:text-[#059669]",
-      badge: "WhatsApp Official",
       linkUrl: "/services",
     },
     {
@@ -101,7 +88,7 @@ export function IntegrationsSection() {
       tagline: "High-Deliverability Email",
       description:
         "Automate bulk email campaigns backed by reliable AWS SES infrastructure.",
-      icon: Mail, // Import 'Mail' icon from lucide-react
+      icon: Mail,
       iconColor: "text-[#D97706]",
       iconBg: "bg-amber-50 border-amber-100/80",
       hoverColor: "group-hover:text-[#D97706]",
@@ -115,7 +102,7 @@ export function IntegrationsSection() {
       tagline: "Smart Data Ingestion",
       description:
         "Import leads easily from Google Sheets or CSV files with dynamic field mapping.",
-      icon: FileSpreadsheet, // Import 'FileSpreadsheet' icon from lucide-react
+      icon: FileSpreadsheet,
       iconColor: "text-[#0D9488]",
       iconBg: "bg-teal-50 border-teal-100/80",
       hoverColor: "group-hover:text-[#0D9488]",
@@ -140,7 +127,7 @@ export function IntegrationsSection() {
       id: "application-reports-analytics",
       name: "Application Reports & Analytics",
       category: "analytics",
-      tagline: "BI & Funnel Intelligence",
+      tagline: "Funnel Intelligence",
       description:
         "Real-time admission performance dashboards and channel conversion reports.",
       icon: BarChart3,
@@ -244,7 +231,7 @@ export function IntegrationsSection() {
             return (
               <Link
                 key={prod.id}
-                href={prod.linkUrl || "/demo"}
+                href={prod.linkUrl || "/services"}
                 className="group relative flex flex-col justify-between p-6 rounded-2xl bg-white border border-slate-200/90 hover:border-indigo-300/80 shadow-xs hover:shadow-xl hover:shadow-indigo-500/10 hover:-translate-y-1.5 transition-all duration-300 cursor-pointer"
               >
                 <div>
@@ -272,7 +259,7 @@ export function IntegrationsSection() {
                     {prod.name}
                   </h3>
 
-                  {/* Concise Description (6-7 words) */}
+                  {/* Concise Description */}
                   <p className="text-xs sm:text-[13px] text-slate-600 leading-relaxed group-hover:text-slate-700 transition-colors">
                     {prod.description}
                   </p>
@@ -286,6 +273,17 @@ export function IntegrationsSection() {
               </Link>
             );
           })}
+        </div>
+
+        {/* View More Services / Products Button Section */}
+        <div className="mt-14 text-center">
+          <Link
+            href="/services"
+            className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-[#4F46E5] hover:bg-[#4338CA] text-white font-bold text-sm tracking-wide shadow-md hover:shadow-indigo-500/25 transition-all duration-300 group cursor-pointer"
+          >
+            <span>View More</span>
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </Link>
         </div>
       </div>
     </section>

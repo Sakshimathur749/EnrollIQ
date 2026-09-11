@@ -96,7 +96,7 @@ const STAGES: StageTab[] = [
       "Connect publishers like Shiksha, CollegeDunia and Edustoke.",
       "Integrate Google Ads, Google My Business and Meta.",
       "Capture leads through Meta Instant Forms.",
-      "Connect MyOperator, TeleCMI, AWS SES and WhatsApp Business",
+      "Connect MyOperator, TeleCMI, AWS SES",
       "Automate workflows with Zapier and Calendly",
     ],
   },
