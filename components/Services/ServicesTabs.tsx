@@ -558,19 +558,19 @@ export const serviceCategories: ServiceCategory[] = [
       <FieldMappingLogo key="fieldmap" />,
     ],
   },
-  {
-    id: "automation-plugin",
-    menuTitle: "Automations & Routing",
-    badge: "Workflow Starter",
-    title: "Automated Lead Distribution & Scheduling",
-    descriptionTop:
-      "Streamline admission operations from day one. Dynamically route incoming leads using configurable Round-Robin, Load-Balanced, or Random distribution rules, accompanied by automated task reminders for counselors.",
-    descriptionBottom:
-      "Integrate calendar links to allow leads and applicants to self-schedule meetings or appointments directly into your team's schedule.",
-    icon: Zap,
-    illustrationType: "automation",
-    logos: [<ZapierLogo key="zapier" />, <CalendlyLogo key="calendly" />],
-  },
+  // {
+  //   id: "automation-plugin",
+  //   menuTitle: "Automations & Routing",
+  //   badge: "Workflow Starter",
+  //   title: "Automated Lead Distribution & Scheduling",
+  //   descriptionTop:
+  //     "Streamline admission operations from day one. Dynamically route incoming leads using configurable Round-Robin, Load-Balanced, or Random distribution rules, accompanied by automated task reminders for counselors.",
+  //   descriptionBottom:
+  //     "Integrate calendar links to allow leads and applicants to self-schedule meetings or appointments directly into your team's schedule.",
+  //   icon: Zap,
+  //   illustrationType: "automation",
+  //   logos: [<ZapierLogo key="zapier" />, <CalendlyLogo key="calendly" />],
+  // },
 ];
 
 // ==========================================
