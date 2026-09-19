@@ -58,7 +58,7 @@ const pillars = [
     title: "Unified Communication Stack",
     subtitle: "Connected Workflow",
     description:
-      "Integrate telephony, WhatsApp, and email directly into counselor dashboards to ensure consistent engagement across every touchpoint.",
+      "Integrate telephony,  and email directly into counselor dashboards to ensure consistent engagement across every touchpoint.",
     badge: "Omnichannel Engagement",
     badgeColor: "bg-amber-50 text-amber-700 border-amber-200/80",
     iconBg: "bg-amber-500/10 text-amber-600 border-amber-200",

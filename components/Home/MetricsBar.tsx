@@ -97,14 +97,14 @@ export function MetricsBar() {
       iconColor: "text-[#4F46E5]",
       iconBg: "bg-indigo-50 border-indigo-200/80",
     },
-    {
-      end: 10,
-      suffix: "+",
-      label: "Institutions & Universities",
-      icon: Award,
-      iconColor: "text-blue-600",
-      iconBg: "bg-blue-50 border-blue-200/80",
-    },
+    // {
+    //   end: 10,
+    //   suffix: "+",
+    //   label: "Institutions & Universities",
+    //   icon: Award,
+    //   iconColor: "text-blue-600",
+    //   iconBg: "bg-blue-50 border-blue-200/80",
+    // },
     {
       end: 2.5,
       decimals: 1,
@@ -164,7 +164,7 @@ export function MetricsBar() {
         <div className="w-14 h-1 bg-gradient-to-r from-[#818CF8] via-[#4F46E5] to-[#A855F7] rounded-full mb-10 sm:mb-14 shadow-sm" />
 
         {/* Horizontal Metrics Grid with Clean Vertical Dividers */}
-        <div className="w-full grid grid-cols-2 md:grid-cols-5 gap-6 sm:gap-8 md:gap-0 md:divide-x md:divide-slate-200 py-2 md:py-0">
+        <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 md:gap-0 md:divide-x md:divide-slate-200 py-2 md:py-0">
           {metrics.map((metric, idx) => {
             const Icon = metric.icon;
             return (

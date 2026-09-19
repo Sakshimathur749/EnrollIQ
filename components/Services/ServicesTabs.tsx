@@ -74,32 +74,10 @@ export function FacebookLogo() {
 export function ShikshaLogo() {
   return (
     <div className="flex items-center gap-2.5">
-      <svg
-        className="w-7 h-7 shrink-0"
-        viewBox="0 0 40 40"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <rect width="40" height="40" rx="8" fill="#FF5B00" />
-        {/* Official Shiksha Mortarboard Cap Vector */}
-        <path d="M20 10L6 18L20 26L34 18L20 10Z" fill="#FFFFFF" />
-        <path
-          d="M11 21.5V27.5C11 29.5 15 31 20 31C25 31 29 29.5 29 27.5V21.5"
-          stroke="#FFFFFF"
-          strokeWidth="2.2"
-          strokeLinecap="round"
-        />
-        <path
-          d="M32 19V27"
-          stroke="#FFFFFF"
-          strokeWidth="2.2"
-          strokeLinecap="round"
-        />
-        <circle cx="32" cy="28.5" r="1.5" fill="#FFFFFF" />
-      </svg>
+      <img src="/assets/images (2).webp" alt="" className="w-7 h-7 shrink-0" />
       <div className="flex flex-col">
         <span className="font-black text-base tracking-tight text-[#2D3748] leading-none">
-          shiksha<span className="text-[#FF5B00]">.com</span>
+          shiksha.com
         </span>
         <span className="text-[10px] font-medium text-slate-500">
           Education Discovery
@@ -112,26 +90,14 @@ export function ShikshaLogo() {
 export function CollegeDuniaLogo() {
   return (
     <div className="flex items-center gap-2.5">
-      <svg
+      <img
+        src="/assets/1596641013-00f502b95d82ebc5.webp"
+        alt=""
         className="w-7 h-7 shrink-0"
-        viewBox="0 0 40 40"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <rect width="40" height="40" rx="8" fill="#0B2239" />
-        {/* Official CollegeDunia Icon Vector */}
-        <path d="M20 9L6 16.5L20 24L34 16.5L20 9Z" fill="#FF9900" />
-        <path
-          d="M10 20V26C10 28.2 14.5 30 20 30C25.5 30 30 28.2 30 26V20"
-          stroke="#FF9900"
-          strokeWidth="2.2"
-          strokeLinecap="round"
-        />
-        <circle cx="20" cy="16.5" r="2.5" fill="#FFFFFF" />
-      </svg>
+      />
       <div className="flex flex-col">
         <span className="font-bold text-sm tracking-tight text-[#0B2239] leading-none">
-          college<span className="text-[#FF9900]">dunia</span>
+          college dunia
         </span>
         <span className="text-[10px] font-medium text-slate-500">
           Admission Search Hub
@@ -144,30 +110,9 @@ export function CollegeDuniaLogo() {
 export function EdustokeLogo() {
   return (
     <div className="flex items-center gap-2.5">
-      <svg
-        className="w-7 h-7 shrink-0"
-        viewBox="0 0 40 40"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <rect width="40" height="40" rx="8" fill="#00A896" />
-        {/* Official Edustoke Stylized 'E' Icon */}
-        <path
-          d="M12 11H28C28 11 28 15 20 15C12 15 12 19 28 19C28 23 20 23 12 23H28"
-          stroke="#FFFFFF"
-          strokeWidth="3"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-        <path
-          d="M12 11V29"
-          stroke="#FFFFFF"
-          strokeWidth="3"
-          strokeLinecap="round"
-        />
-      </svg>
+      <img src="/assets/images.webp" alt="" className="w-7 h-7 shrink-0" />
       <div className="flex flex-col">
-        <span className="font-extrabold text-sm tracking-tight text-[#00A896] leading-none">
+        <span className="font-extrabold text-sm tracking-tight text-black leading-none">
           edustoke
         </span>
         <span className="text-[10px] font-medium text-slate-500">
@@ -181,22 +126,10 @@ export function EdustokeLogo() {
 export function MyOperatorLogo() {
   return (
     <div className="flex items-center gap-2.5">
-      <svg className="w-7 h-7 shrink-0" viewBox="0 0 32 32" fill="none">
-        <rect width="32" height="32" rx="8" fill="#E53935" />
-        <path
-          d="M16 8C11.6 8 8 11.6 8 16V20C8 21.1 8.9 22 10 22H11C11.6 22 12 21.6 12 21V17C12 16.4 11.6 16 11 16H9.6C9.9 12.6 12.6 10 16 10C19.4 10 22.1 12.6 22.4 16H21C20.4 16 20 16.4 20 17V21C20 21.6 20.4 22 21 22H22C23.1 22 24 21.1 24 20V16C24 11.6 20.4 8 16 8Z"
-          fill="#FFFFFF"
-        />
-        <path
-          d="M22 22V23.5C22 24.3 21.3 25 20.5 25H17"
-          stroke="#FFFFFF"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-        />
-      </svg>
+      <img src="/assets/download.webp" alt="" className="w-7 h-7 shrink-0" />
       <div className="flex flex-col">
         <span className="font-extrabold text-sm tracking-tight text-[#D32F2F] leading-none">
-          My<span className="text-slate-900">Operator</span>
+          <span className="text-slate-900">MyOperator</span>
         </span>
         <span className="text-[10px] font-medium text-slate-500">
           Cloud Telephony & IVR
@@ -209,31 +142,14 @@ export function MyOperatorLogo() {
 export function TeleCMILogo() {
   return (
     <div className="flex items-center gap-2.5">
-      <svg className="w-7 h-7 shrink-0" viewBox="0 0 32 32" fill="none">
-        <rect width="32" height="32" rx="8" fill="#0284C7" />
-        <path
-          d="M9 18C9 14.1 12.1 11 16 11C19.9 11 23 14.1 23 18"
-          stroke="#FFFFFF"
-          strokeWidth="2.2"
-          strokeLinecap="round"
-        />
-        <path
-          d="M12 19C12 16.8 13.8 15 16 15C18.2 15 20 16.8 20 19"
-          stroke="#FFFFFF"
-          strokeWidth="2"
-          strokeLinecap="round"
-        />
-        <circle cx="16" cy="20" r="1.8" fill="#FFFFFF" />
-        <path
-          d="M16 6V9"
-          stroke="#FFFFFF"
-          strokeWidth="2"
-          strokeLinecap="round"
-        />
-      </svg>
+      <img
+        src="/assets/download (1).webp"
+        alt=""
+        className="w-7 h-7 shrink-0"
+      />
       <div className="flex flex-col">
         <span className="font-extrabold text-sm tracking-tight text-[#0284C7] leading-none">
-          Tele<span className="text-slate-900">CMI</span>
+          <span className="text-slate-900">TeleCMI</span>
         </span>
         <span className="text-[10px] font-medium text-slate-500">
           Virtual PBX Dialer
@@ -274,12 +190,7 @@ export function GoogleAdsLogo() {
 export function GoogleMyBusinessLogo() {
   return (
     <div className="flex items-center gap-2.5">
-      <svg className="w-7 h-7 shrink-0" viewBox="0 0 32 32" fill="none">
-        <rect width="32" height="32" rx="8" fill="#4285F4" />
-        <path d="M8 12L16 7L24 12V14H8V12Z" fill="#FFFFFF" />
-        <path d="M10 14V22H22V14" fill="#E8F0FE" />
-        <rect x="13" y="16" width="6" height="6" rx="1" fill="#4285F4" />
-      </svg>
+      <img src="/assets/images (1).webp" alt="" className="w-7 h-7 shrink-0" />
       <div className="flex flex-col">
         <span className="font-bold text-xs sm:text-sm tracking-tight text-slate-900 leading-none">
           Google Business
