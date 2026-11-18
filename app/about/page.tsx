@@ -1,9 +1,10 @@
 import MainAbout from "../../components/About/MainAbout";
 
 export const metadata = {
-  title: "About Us — EnrollIQ",
+  title: "Contact EnrollIQ | Book a Free Education CRM Demo",
   description:
-    "Learn about EnrollIQ's mission to transform admissions management for educational institutions across India.",
+    "Talk to the EnrollIQ team in Jodhpur or Bengaluru. Get a free demo of our admission CRM and see how it can improve your enrollment conversions.",
+  keywords: "education CRM demo, admission CRM Bengaluru, CRM for institutes",
 };
 
 export default function AboutPage() {

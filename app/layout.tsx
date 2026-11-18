@@ -10,22 +10,34 @@ const plusJakartaSans = Plus_Jakarta_Sans({
   preload: true,
 });
 
-const APP_TITLE = "EnrollIQ CRM - Login & Onboarding Portal";
+const SITE_URL = "https://www.enrolliq.ai";
+const APP_TITLE = "EnrollIQ | Education CRM & Admission Management Software";
 const APP_DESCRIPTION =
-  "Official login and onboarding authentication portal for EnrollIQ Education CRM, featuring interactive enrollment insights carousel, social sign-in, and account registration.";
+  "AI-powered education CRM for admissions. Capture leads from Meta, Google & Shiksha, auto-allocate to counselors, automate WhatsApp. Book a free demo.";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: APP_TITLE,
   description: APP_DESCRIPTION,
+  keywords: [
+    "education CRM",
+    "admission CRM",
+    "student enrollment CRM",
+    "admission management software",
+    "CRM for colleges and universities",
+  ],
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: [
       {
-        url: "./assets/favicon.webp",
+        url: "/assets/favicon.webp",
         type: "image/webp",
       },
     ],
-    shortcut: "./assets/favicon.webp",
-    apple: "./assets/favicon.webp", // Optional: Apple devices ke liye PNG zyada reliable rehta hai
+    shortcut: "/assets/favicon.webp",
+    apple: "/assets/favicon.webp",
   },
   verification: {
     google: "Z_QgZLeXsrUWr3qHFZq_qiGbSqrnaMGcuyJzyCh7eig",
@@ -33,12 +45,23 @@ export const metadata: Metadata = {
   openGraph: {
     title: APP_TITLE,
     description: APP_DESCRIPTION,
+    url: SITE_URL,
+    siteName: "EnrollIQ",
     type: "website",
+    images: [
+      {
+        url: "/assets/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: APP_TITLE,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: APP_TITLE,
     description: APP_DESCRIPTION,
+    images: ["/assets/og-image.jpg"],
   },
 };
 

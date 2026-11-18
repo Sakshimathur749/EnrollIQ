@@ -13,7 +13,6 @@ import { EduFooter } from "@/components/EduFooter";
 import { ScheduleDemoModal } from "@/components/Login/ScheduleDemoModal";
 import { VideoDemoModal } from "@/components/VideoDemoModal";
 import { ClientLogosMarquee } from "@/components/Home/ClientLogosMarquee";
-
 export default function HomePage() {
   const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
