@@ -516,17 +516,17 @@ export const serviceCategories: ServiceCategory[] = [
     ],
   },
   {
-    id: "email-connector",
-    menuTitle: "Email Connector",
+    id: "whatsapp-email-connector",
+    menuTitle: "WhatsApp & Email Campaigns",
     badge: "Communication",
-    title: "Email Integration & Outreach Studio",
+    title: "WhatsApp Automation & Email Outreach Studio",
     descriptionTop:
-      "Connect your institutional or company email server using Amazon SES or standard SMTP settings. Create email templates and deliver important updates directly through your CRM.",
+      "Automate instant WhatsApp messages, drip follow-ups, and targeted email campaigns using standard SMTP settings. Create reusable templates and deliver important admission updates directly through your CRM.",
     descriptionBottom:
-      "Track basic open and click metrics while ensuring proper email deliverability setup with SPF and DKIM authentication.",
+      "Track message delivery, open, and click metrics while keeping all student communication synced in one place.",
     icon: Mail,
     illustrationType: "email",
-    logos: [<AwsSesLogo key="ses" />],
+    logos: [<WhatsAppLogo key="whatsapp" />],
   },
   // {
   //   id: "messaging-whatsapp",

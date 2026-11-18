@@ -124,10 +124,10 @@ export default function ContactSection() {
                   <div className="flex items-center gap-2 text-slate-800">
                     <Mail className="w-4 h-4 text-emerald-600 shrink-0" />
                     <a
-                      href="mailto:ticket@enrolliq.com"
+                      href="mailto:pranjal@mediagarh.com"
                       className="text-slate-900 hover:text-indigo-600 transition-colors font-bold"
                     >
-                      ticket@enrolliq.com
+                      pranjal@mediagarh.com
                     </a>
                   </div>
                 </div>

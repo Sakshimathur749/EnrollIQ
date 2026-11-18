@@ -50,8 +50,8 @@ export function ProblemSolutionSection() {
       desc: "Live campaign manager dashboard tracking exact source-wise ROI & admission conversions.",
     },
     {
-      title: "Built-in Telephony & AWS SES",
-      desc: "Native connectors for telephony call logs, AWS SES emailers, and automated workflows.",
+      title: "WhatsApp Automation & Built-in Telephony",
+      desc: "Native connectors for automated WhatsApp messaging, telephony call logs, emailers, and workflows.",
     },
   ];
 
@@ -72,9 +72,9 @@ export function ProblemSolutionSection() {
             Designed to Fix Educational Admission Bottlenecks
           </h2>
           <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl mx-auto">
-            Upgrade from generic sales tools to EnrollIQ—a digital CRM built for
-            admissions that seamlessly integrates marketing channels, counselor
-            workflows, and telephony.
+            Upgrade from generic sales tools to EnrollIQ — a digital CRM built
+            for admissions that seamlessly integrates marketing channels,
+            counselor workflows, and telephony.
           </p>
         </div>
 

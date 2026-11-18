@@ -155,20 +155,14 @@ export function EduNavbar({ onOpenDemo }: EduNavbarProps) {
           {/* 1. Left Logo: EnrollIQ (with 3-tiered pill icon) */}
           <Link
             href="/"
-            className="flex items-center gap-3 group shrink-0"
+            className="flex items-center gap-3 group shrink-0  w-34"
             id="nav-brand-logo"
           >
-            {/* Custom 3-bar funnel icon matching the reference image */}
-            <div className="w-8 h-8 flex flex-col justify-center gap-1.5 group-hover:scale-105 transition-transform">
-              <div className="w-7 h-1.5 bg-[#0F172A] rounded-full" />
-              <div className="w-5 h-1.5 bg-[#0F172A] rounded-full" />
-              <div className="w-3.5 h-1.5 bg-[#4F46E5] rounded-full" />
-            </div>
-
-            <div className="font-heading text-2xl tracking-tight leading-none">
-              <span className="font-extrabold text-[#0F172A]">Enroll</span>
-              <span className="font-extrabold text-[#4F46E5]">IQ</span>
-            </div>
+            <img
+              src="/assets/EnrolliqLogo.webp"
+              className="object-cover"
+              alt=""
+            />
           </Link>
 
           {/* 2. Center Navigation Links: Home, About, Product ▾, Contact */}

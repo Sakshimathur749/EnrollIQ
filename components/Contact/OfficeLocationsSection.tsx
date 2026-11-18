@@ -12,7 +12,7 @@ export default function OfficeLocationsSection() {
       address:
         "142, Pal Rd, near Amargarh Resort, Ravi Nagar, Bhadu Market, Jodhpur, Rajasthan 342001",
       phone: "+91 80031 41049",
-      email: "hq@enrolliq.com",
+      email: "pranjal@mediagarh.com",
       isPrimary: true,
       landmark: "Near Amargarh Resort",
     },
@@ -20,9 +20,10 @@ export default function OfficeLocationsSection() {
       city: "Bengaluru, Karnataka",
       tag: "Tech & Innovation Hub",
       timeZone: "IST (UTC +5:30)",
-      address: "Bengaluru, Karnataka, India",
+      address:
+        "5th Floor, 365 Office Space, 22nd Cross Rd, Garden Layout, Sector 2, HSR Layout, Bengaluru, Karnataka 560102",
       phone: "+91 97616 92241",
-      email: "bangalore@enrolliq.com",
+      email: "pankaj@mediagarh.com",
       isPrimary: false,
       landmark: "Silicon Valley of India",
     },

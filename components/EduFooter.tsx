@@ -45,20 +45,15 @@ export function EduFooter({ onOpenDemo }: EduFooterProps) {
           >
             <Link
               href="/"
-              className="flex items-center gap-3 group inline-flex"
+              className="flex items-center gap-3 group inline-flex  w-34 flex-shrink-0"
               id="footer-logo"
             >
               {/* Custom 3-bar funnel logo matching header in light mode */}
-              <div className="w-8 h-8 flex flex-col justify-center gap-1.5 group-hover:scale-105 transition-transform">
-                <div className="w-7 h-1.5 bg-[#0F172A] rounded-full" />
-                <div className="w-5 h-1.5 bg-slate-400 rounded-full" />
-                <div className="w-3.5 h-1.5 bg-[#4F46E5] rounded-full" />
-              </div>
-
-              <div className="font-heading text-2xl tracking-tight leading-none">
-                <span className="font-extrabold text-[#0F172A]">Enroll</span>
-                <span className="font-extrabold text-[#4F46E5]">IQ</span>
-              </div>
+              <img
+                src="/assets/EnrolliqLogo.webp"
+                className="object-cover"
+                alt=""
+              />
             </Link>
 
             <p className="text-sm text-slate-600 leading-relaxed max-w-md">
@@ -112,7 +107,7 @@ export function EduFooter({ onOpenDemo }: EduFooterProps) {
             </h4>
             <div className="space-y-3.5 text-sm">
               <a
-                href="mailto:info@enrolliq.com"
+                href="mailto:pranjal@mediagarh.com"
                 className="group flex items-center gap-3 text-slate-600 hover:text-[#4F46E5] transition-colors"
                 id="footer-email-link"
               >
@@ -120,7 +115,7 @@ export function EduFooter({ onOpenDemo }: EduFooterProps) {
                   <Mail className="w-4 h-4" />
                 </div>
                 <span className="font-medium text-slate-700 group-hover:text-[#4F46E5] transition-colors">
-                  info@enrolliq.com
+                  pranjal@mediagarh.com
                 </span>
               </a>
 
@@ -138,7 +133,8 @@ export function EduFooter({ onOpenDemo }: EduFooterProps) {
                   <MapPin className="w-4 h-4" />
                 </div>
                 <span className="font-medium text-slate-700">
-                  Bengaluru, Karnataka, India{" "}
+                  5th Floor, 365 Office Space, 22nd Cross Rd, Garden Layout,
+                  Sector 2, HSR Layout, Bengaluru, Karnataka 560102
                 </span>
               </div>
             </div>

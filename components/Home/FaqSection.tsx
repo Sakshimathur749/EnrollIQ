@@ -81,7 +81,7 @@ const FAQ_DATA: FaqItem[] = [
     id: "faq-5",
     question: "Which platforms and tools can be integrated with EnrollIQ?",
     answer:
-      "EnrollIQ supports integrations across publishers api, telephony, advertising, email, messaging, and automation. Available integrations include Shiksha, CollegeDunia, Edustoke, MyOperator, TeleCMI, Google Ads, Google My Business, Meta Instant Forms, Meta Conversions API, AWS SES,  Zapier, and Calendly.",
+      "EnrollIQ supports integrations across publishers api, telephony, advertising, email, messaging, and automation. Available integrations include Shiksha, CollegeDunia, Edustoke, MyOperator, TeleCMI, Google Ads, Google My Business, Meta Instant Forms, Meta Conversions API, WhatsApp automation,  Zapier, and Calendly.",
   },
 
   {
@@ -100,9 +100,10 @@ const FAQ_DATA: FaqItem[] = [
 
   {
     id: "faq-8",
-    question: "Does EnrollIQ support  email, and telephony?",
+    question:
+      "Does EnrollIQ support WhatsApp automation, email, and telephony?",
     answer:
-      "Yes. EnrollIQ connects communication channels with the lead management workflow through  AWS SES for email, and telephony platforms such as MyOperator and TeleCMI. This keeps lead communication and follow-ups connected with the CRM.",
+      "Yes. EnrollIQ connects communication channels directly with your lead management workflow, including WhatsApp automation, email, and telephony platforms such as MyOperator and TeleCMI. This keeps all student outreach, automated messages, and counselor follow-ups synced within the CRM.",
   },
 ];
 export function FaqSection() {

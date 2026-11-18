@@ -40,7 +40,7 @@ export function CtaBanner({ onOpenDemo }: CtaBannerProps) {
     {
       title: "Native Integrations",
       icon: Puzzle,
-      desc: "Built-in connectors for Telephony, AWS SES & Zapier",
+      desc: "Built-in connectors for WhatsApp Automation, Telephony & Zapier",
     },
   ];
 

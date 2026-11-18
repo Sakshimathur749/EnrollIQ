@@ -17,6 +17,16 @@ const APP_DESCRIPTION =
 export const metadata: Metadata = {
   title: APP_TITLE,
   description: APP_DESCRIPTION,
+  icons: {
+    icon: [
+      {
+        url: "./assets/favicon.webp",
+        type: "image/webp",
+      },
+    ],
+    shortcut: "./assets/favicon.webp",
+    apple: "./assets/favicon.webp", // Optional: Apple devices ke liye PNG zyada reliable rehta hai
+  },
   openGraph: {
     title: APP_TITLE,
     description: APP_DESCRIPTION,
