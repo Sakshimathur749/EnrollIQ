@@ -17,29 +17,79 @@ const clientLogos: ClientLogoItem[] = [
     src: "/assets/clients/aimsibs.webp",
   },
   {
+    id: "Alpenstock",
+    name: "Alpenstock",
+    src: "/assets/clients/Alpenstock.webp",
+  },
+  {
+    id: "Amatir",
+    name: "Amatir",
+    src: "/assets/clients/Amatir.webp",
+  },
+  {
+    id: "AmberValley",
+    name: "AmberValley",
+    src: "/assets/clients/AmberValley.webp",
+  },
+  {
+    id: "Doon",
+    name: "Doon",
+    src: "/assets/clients/Doon.webp",
+  },
+  {
+    id: "e-Drishyam",
+    name: "e-Drishyam",
+    src: "/assets/clients/e-Drishyam.webp",
+  },
+  {
+    id: "Himalayan",
+    name: "Himalayan",
+    src: "/assets/clients/Himalayan.webp",
+  },
+  {
     id: "izee",
     name: "izee",
     src: "/assets/clients/izee.webp",
   },
   {
-    id: "nextgen-academy",
-    name: "NextGen Academy",
-    src: "/assets/clients/client_logo_nextgen_academy_1794995347173.jpg",
+    id: "JuniorToes",
+    name: "JuniorToes",
+    src: "/assets/clients/JuniorToes.webp",
   },
   {
-    id: "scalerx-institute",
-    name: "ScalerX Institute",
-    src: "/assets/clients/client_logo_scalerx_tech_1794995348192.jpg",
+    id: "NIIB",
+    name: "NIIB",
+    src: "/assets/clients/NIIB.webp",
   },
   {
-    id: "vanguard-bschool",
-    name: "Vanguard Business School",
-    src: "/assets/clients/client_logo_vanguard_bschool_1794995348952.jpg",
+    id: "Rockwell",
+    name: "Rockwell",
+    src: "/assets/clients/Rockwell.webp",
   },
   {
-    id: "sterling-schools",
-    name: "Sterling Schools",
-    src: "/assets/clients/client_logo_sterling_schools_1794995348789.jpg",
+    id: "Scope",
+    name: "Scope",
+    src: "/assets/clients/Scope.webp",
+  },
+  {
+    id: "Shreejee",
+    name: "Shreejee",
+    src: "/assets/clients/Shreejee.webp",
+  },
+  {
+    id: "StarYogStudio",
+    name: "StarYogStudio",
+    src: "/assets/clients/StarYogStudio.webp",
+  },
+  {
+    id: "TheIndianHeritage",
+    name: "TheIndianHeritage",
+    src: "/assets/clients/TheIndianHeritage.webp",
+  },
+  {
+    id: "VishwaVidyapeeth",
+    name: "VishwaVidyapeeth",
+    src: "/assets/clients/VishwaVidyapeeth.webp",
   },
 ];
 
