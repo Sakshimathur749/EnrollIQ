@@ -12,6 +12,7 @@ import { CtaBanner } from "@/components/Home/CtaBanner";
 import { EduFooter } from "@/components/EduFooter";
 import { ScheduleDemoModal } from "@/components/Login/ScheduleDemoModal";
 import { VideoDemoModal } from "@/components/VideoDemoModal";
+import { ClientLogosMarquee } from "@/components/Home/ClientLogosMarquee";
 
 export default function HomePage() {
   const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
@@ -34,6 +35,7 @@ export default function HomePage() {
 
         {/* 3. "CONNECT TO 100+ INTEGRATIONS" MARQUEE (Right after Hero) */}
         <IntegrationsMarquee />
+        {/* <ClientLogosMarquee /> */}
 
         {/* 4. PROCESS & FLOW OF LEADS (ONE CONNECTED ENROLLMENT SYSTEM) */}
         <ProcessFlowSection />

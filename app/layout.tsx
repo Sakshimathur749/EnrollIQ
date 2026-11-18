@@ -27,6 +27,9 @@ export const metadata: Metadata = {
     shortcut: "./assets/favicon.webp",
     apple: "./assets/favicon.webp", // Optional: Apple devices ke liye PNG zyada reliable rehta hai
   },
+  verification: {
+    google: "Z_QgZLeXsrUWr3qHFZq_qiGbSqrnaMGcuyJzyCh7eig",
+  },
   openGraph: {
     title: APP_TITLE,
     description: APP_DESCRIPTION,
