@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Block private CRM and authentication areas
+Disallow: /login
+Disallow: /dashboard/
+Disallow: /admin/
+Disallow: /api/
+Disallow: /uploads/private/
+
+# Sitemap location
+Sitemap: https://www.enrolliq.ai/sitemap.xml

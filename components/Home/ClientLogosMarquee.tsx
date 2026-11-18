@@ -12,14 +12,14 @@ interface ClientLogoItem {
 
 const clientLogos: ClientLogoItem[] = [
   {
-    id: "oxford-global",
-    name: "Oxford Global University",
-    src: "/assets/clients/client_logo_oxford_global_1794995346628.jpg",
+    id: "aims",
+    name: "aims",
+    src: "/assets/clients/aimsibs.webp",
   },
   {
-    id: "apex-university",
-    name: "Apex University",
-    src: "/assets/clients/client_logo_apex_university_1794995347017.jpg",
+    id: "izee",
+    name: "izee",
+    src: "/assets/clients/izee.webp",
   },
   {
     id: "nextgen-academy",
