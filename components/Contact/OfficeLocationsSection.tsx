@@ -31,7 +31,7 @@ export default function OfficeLocationsSection() {
 
   return (
     <div
-      className="space-y-8 sm:space-y-10 py-12"
+      className="space-y-8 sm:space-y-10 py-12 px-4 sm:px-6 lg:px-8"
       id="office-locations-section"
     >
       {/* Section Header */}
