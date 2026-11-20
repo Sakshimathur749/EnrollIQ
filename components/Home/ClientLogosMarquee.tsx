@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Building2 } from "lucide-react";
+import { Building2, GraduationCap } from "lucide-react";
 
 interface ClientLogoItem {
   id: string;
@@ -61,7 +61,7 @@ function ClientLogoImageCard({ client }: { client: ClientLogoItem }) {
 
   return (
     <div
-      className="group relative flex items-center justify-center h-[100px] bg-white w-auto px-4 py-2 rounded-lg border border-slate-200/90 hover:border-indigo-300/90 transition-all duration-200 shrink-0"
+      className="group relative flex items-center justify-center h-[60px] md:h-[100px] bg-white w-auto px-4 py-2 rounded-lg border border-slate-200/90 hover:border-indigo-300/90 transition-all duration-200 shrink-0"
       title={client.name}
     >
       {hasError ? (
@@ -94,10 +94,13 @@ export function ClientLogosMarquee() {
       aria-label="Client Logos"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
-        <div className="max-w-2xl mx-auto space-y-2.5">
-          <p className="text-xs font-bold uppercase tracking-widest text-[#4F46E5]">
-            Trusted By Leading Campuses
-          </p>
+        <div className="max-w-2xl mx-auto space-y-2.5 flex flex-col items-center">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F3E8FF]/80 border border-purple-200/90 text-xs font-bold text-[#7E22CE] shadow-2xs">
+            <GraduationCap className="w-3.5 h-3.5 text-amber-500" />
+            <span className="tracking-wide uppercase text-[11px]">
+              Trusted By Leading Campuses
+            </span>
+          </div>
 
           <h2 className="font-heading font-black text-2xl sm:text-3xl text-[#0F172A] tracking-tight text-balance">
             Powering Admissions for{" "}
