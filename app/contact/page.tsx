@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import React, { useState } from "react";
-import Link from "next/link";
+import React, { useState } from 'react';
+import Link from 'next/link';
 import {
   Mail,
   Phone,
@@ -18,23 +18,21 @@ import {
   Users,
   Globe2,
   Zap,
-} from "lucide-react";
-import { EduNavbar } from "@/components/EduNavbar";
-import { EduFooter } from "@/components/EduFooter";
-import { CtaBanner } from "@/components/Home/CtaBanner";
-import { ScheduleDemoModal } from "@/components/Login/ScheduleDemoModal";
-import MainContact from "@/components/Contact/MainContact";
+} from 'lucide-react';
+import { EduNavbar } from '@/components/EduNavbar';
+import { EduFooter } from '@/components/EduFooter';
+import { CtaBanner } from '@/components/Home/CtaBanner';
+import { ScheduleDemoModal } from '@/components/Login/ScheduleDemoModal';
+import MainContact from '@/components/Contact/MainContact';
 
 export default function ContactPage() {
   const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [institutionType, setInstitutionType] = useState(
-    "Higher Ed / University",
-  );
-  const [counselorCount, setCounselorCount] = useState("10 - 25 Counselors");
-  const [requirement, setRequirement] = useState("");
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [institutionType, setInstitutionType] = useState('Higher Ed / University');
+  const [counselorCount, setCounselorCount] = useState('10 - 25 Counselors');
+  const [requirement, setRequirement] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -49,19 +47,14 @@ export default function ContactPage() {
 
   const regionalOffices = [
     {
-      type: "Regional Office",
-      city: "Bangalore, Karnataka",
-      region: "South Hub",
-      phone: "+91 (80) 4129-8800",
-      address:
-        "KustomWork, #1611, 7th Cross, 19th Main, Sector - 1, HSR Layout, Bengaluru, Karnataka - 560102",
-      landmark: "Near CP67 Tech Hub",
+      type: 'Regional Office',
+      city: 'Bangalore, Karnataka',
+      region: 'South Hub',
+      phone: '+91 (80) 4129-8800',
+      address: 'KustomWork, #1611, 7th Cross, 19th Main, Sector - 1, HSR Layout, Bengaluru, Karnataka - 560102',
+      landmark: 'Near CP67 Tech Hub',
       iconSvg: (
-        <svg
-          viewBox="0 0 64 64"
-          className="w-9 h-9 stroke-indigo-600 fill-indigo-50/60"
-          strokeWidth="1.8"
-        >
+        <svg viewBox="0 0 64 64" className="w-9 h-9 stroke-indigo-600 fill-indigo-50/60" strokeWidth="1.8">
           <path
             d="M12 52h40M16 52V28m32 24V28M24 52V36m16 16V36M8 28h48M20 28V18m24 10V18M28 28V12c0-2 2-4 4-4s4 2 4 4v16M32 8V4"
             strokeLinecap="round"
@@ -72,19 +65,14 @@ export default function ContactPage() {
       ),
     },
     {
-      type: "Regional Office",
-      city: "Chennai, Tamil Nadu",
-      region: "Tamil Nadu & Kerala",
-      phone: "+91 (44) 2836-4100",
-      address:
-        "Office No. 01, IndiQube Viceroy, Raj Bhavan Exchange, Sardar Patel Rd, Little Mount, Tamil Nadu 600032",
-      landmark: "Next to Raj Bhavan Metro",
+      type: 'Regional Office',
+      city: 'Chennai, Tamil Nadu',
+      region: 'Tamil Nadu & Kerala',
+      phone: '+91 (44) 2836-4100',
+      address: 'Office No. 01, IndiQube Viceroy, Raj Bhavan Exchange, Sardar Patel Rd, Little Mount, Tamil Nadu 600032',
+      landmark: 'Next to Raj Bhavan Metro',
       iconSvg: (
-        <svg
-          viewBox="0 0 64 64"
-          className="w-9 h-9 stroke-rose-600 fill-rose-50/60"
-          strokeWidth="1.8"
-        >
+        <svg viewBox="0 0 64 64" className="w-9 h-9 stroke-rose-600 fill-rose-50/60" strokeWidth="1.8">
           <path
             d="M10 52h44M18 52V24h28v28M26 24V14l6-6 6 6v10M14 52V34h4v18M46 52V34h4v18M32 28v6M30 44h4v8h-4z"
             strokeLinecap="round"
@@ -95,56 +83,38 @@ export default function ContactPage() {
       ),
     },
     {
-      type: "Regional Office",
-      city: "Pune, Maharashtra",
-      region: "West Tech Hub",
-      phone: "+91 (20) 6780-9200",
-      address:
-        "12th Floor, Amar Apex Center, Pancard Club Rd, Baner, Pune, Maharashtra 411069",
-      landmark: "Baner IT Corridor",
+      type: 'Regional Office',
+      city: 'Pune, Maharashtra',
+      region: 'West Tech Hub',
+      phone: '+91 (20) 6780-9200',
+      address: '12th Floor, Amar Apex Center, Pancard Club Rd, Baner, Pune, Maharashtra 411069',
+      landmark: 'Baner IT Corridor',
       iconSvg: (
-        <svg
-          viewBox="0 0 64 64"
-          className="w-9 h-9 stroke-purple-600 fill-purple-50/60"
-          strokeWidth="1.8"
-        >
+        <svg viewBox="0 0 64 64" className="w-9 h-9 stroke-purple-600 fill-purple-50/60" strokeWidth="1.8">
           <path
             d="M10 52h44M14 52V26l6-4v30M44 52V22l6 4v26M20 30h24v22H20zM26 38h12M28 52v-6h8v6"
             strokeLinecap="round"
             strokeLinejoin="round"
           />
-          <path
-            d="M24 22h16l-8-8z"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
+          <path d="M24 22h16l-8-8z" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       ),
     },
     {
-      type: "Satellite Office",
-      city: "Ahmedabad, Gujarat",
-      region: "Gujarat & Rajasthan",
-      phone: "+91 (79) 4900-3310",
-      address:
-        "Mondeal Heights, B Wing, 17th Floor, Near Novotel Hotel, SG Highway, Ahmedabad, Gujarat 380015",
-      landmark: "SG Highway Business Bay",
+      type: 'Satellite Office',
+      city: 'Ahmedabad, Gujarat',
+      region: 'Gujarat & Rajasthan',
+      phone: '+91 (79) 4900-3310',
+      address: 'Mondeal Heights, B Wing, 17th Floor, Near Novotel Hotel, SG Highway, Ahmedabad, Gujarat 380015',
+      landmark: 'SG Highway Business Bay',
       iconSvg: (
-        <svg
-          viewBox="0 0 64 64"
-          className="w-9 h-9 stroke-amber-600 fill-amber-50/60"
-          strokeWidth="1.8"
-        >
+        <svg viewBox="0 0 64 64" className="w-9 h-9 stroke-amber-600 fill-amber-50/60" strokeWidth="1.8">
           <path
             d="M8 52h48M14 52V28m36 24V28M20 52V22c0-4 4-8 12-8s12 4 12 8v30M26 34c0-3 3-5 6-5s6 2 6 5v18H26z"
             strokeLinecap="round"
             strokeLinejoin="round"
           />
-          <path
-            d="M12 28l2-8 2 8M48 28l2-8 2 8M32 14V8"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
+          <path d="M12 28l2-8 2 8M48 28l2-8 2 8M32 14V8" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       ),
     },
@@ -389,8 +359,9 @@ export default function ContactPage() {
                       <input
                         type="tel"
                         required
+                        maxLength={10}
                         value={phone}
-                        onChange={(e) => setPhone(e.target.value)}
+                        onChange={(e) => setPhone(e.target.value.replace(/\D/g, '').slice(0, 10))}
                         placeholder="Phone Number *"
                         className="w-full px-3.5 py-3 bg-transparent text-slate-900 placeholder-slate-500 text-sm focus:outline-none"
                         id="contact-phone-input"

@@ -290,8 +290,9 @@ export default function ContactSection() {
                     <input
                       type="tel"
                       required
+                      maxLength={10}
                       value={phone}
-                      onChange={(e) => setPhone(e.target.value)}
+                      onChange={(e) => setPhone(e.target.value.replace(/\D/g, '').slice(0, 10))}
                       placeholder="Phone Number *"
                       className="w-full px-3.5 py-3 bg-transparent text-slate-900 placeholder-slate-400 text-sm focus:outline-none"
                       id="contact-phone-input"
