@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import React from "react";
+import React from 'react';
 import {
   Sparkles,
   Phone,
@@ -12,32 +12,120 @@ import {
   ArrowRight,
   Building2,
   Users2,
-} from "lucide-react";
+} from 'lucide-react';
 
 export default function ContactSection() {
   // State variables for form management
   const [isSubmitted, setIsSubmitted] = React.useState(false);
   const [isSubmitting, setIsSubmitting] = React.useState(false);
+  const [submitError, setSubmitError] = React.useState<string | null>(null);
 
-  const [name, setName] = React.useState("");
-  const [email, setEmail] = React.useState("");
-  const [phone, setPhone] = React.useState("");
-  const [institutionType, setInstitutionType] = React.useState(
-    "Higher Ed / University",
-  );
-  const [counselorCount, setCounselorCount] =
-    React.useState("1 - 5 Counselors");
-  const [requirement, setRequirement] = React.useState("");
+  const [name, setName] = React.useState('');
+  const [email, setEmail] = React.useState('');
+  const [phone, setPhone] = React.useState('');
+  const [institutionType, setInstitutionType] = React.useState('HigherEd / University');
+  const [counselorCount, setCounselorCount] = React.useState('1 - 5 Counselors');
+  const [requirement, setRequirement] = React.useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const CRM_API_URL = 'https://crm.mediagarh.com/CRM/api/leads/create';
+  const CRM_API_KEY = 'b62d20f5cd5e82d3ee1cfe7fc85cccbbe43db37e36830923557c912602afe023';
+  const FORM_ID = 93;
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitError(null);
 
-    // Simulate API submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+    // Capture UTM params and page info from the browser
+    const searchParams = new URLSearchParams(window.location.search);
+    const utm_source = searchParams.get('utm_source') || '';
+    const utm_medium = searchParams.get('utm_medium') || '';
+    const utm_campaign = searchParams.get('utm_campaign') || '';
+    const landing_url = window.location.href;
+    const referrer_url = document.referrer || '';
+
+    // Split full name into first/last (CRM expects full name in first_name, last word in last_name)
+    const nameParts = name.trim().split(/\s+/);
+    const firstName = name.trim();
+    const lastName = nameParts.length > 1 ? nameParts[nameParts.length - 1] : '';
+
+    // Strip non-digits from phone
+    const cleanPhone = phone.replace(/\D/g, '');
+
+    const payload = {
+      form_id: FORM_ID,
+      first_name: firstName,
+      last_name: lastName,
+      email,
+      phone: cleanPhone,
+      utm_source,
+      utm_medium,
+      utm_campaign,
+      landing_url,
+      referrer_url,
+      custom_fields: {
+        field_field_1795507100399_f1vfa: {
+          label: 'Name',
+          type: 'text',
+          value: name,
+          map_to: 'first_name',
+        },
+        field_field_1795507100892_idti8: {
+          label: 'Email Address',
+          type: 'email',
+          value: email,
+          map_to: 'email',
+        },
+        field_field_1795507101509_s8any: {
+          label: 'Phone Number',
+          type: 'phone',
+          value: cleanPhone,
+          map_to: 'phone_number',
+        },
+        field_field_1795507105977_v51q9: {
+          label: 'Institution Type',
+          type: 'select',
+          value: institutionType,
+          map_to: 'institution_type',
+        },
+        field_field_1795507109559_xik27: {
+          label: 'Counselor Team Size',
+          type: 'select',
+          value: counselorCount,
+          map_to: 'counselor_team_size',
+        },
+        field_field_1795507110276_rkwxk: {
+          label: 'Message',
+          type: 'textarea',
+          value: requirement || '',
+          map_to: 'message',
+        },
+      },
+    };
+
+    try {
+      const res = await fetch(CRM_API_URL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Api-Key': CRM_API_KEY,
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!res.ok) {
+        const errText = await res.text().catch(() => '');
+        console.error('CRM API error:', res.status, errText);
+        throw new Error(`Server returned ${res.status}: ${errText}`);
+      }
+
       setIsSubmitted(true);
-    }, 1200);
+    } catch (error) {
+      console.error('Contact form submission error:', error);
+      setSubmitError('Something went wrong. Please try again or call us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -50,7 +138,7 @@ export default function ContactSection() {
           className="absolute inset-0 opacity-[0.03]"
           style={{
             backgroundImage: `radial-gradient(#0F172A 1px, transparent 1px)`,
-            backgroundSize: "24px 24px",
+            backgroundSize: '24px 24px',
           }}
         />
       </div>
@@ -71,9 +159,8 @@ export default function ContactSection() {
               </h2>
 
               <p className="text-base sm:text-lg text-slate-600 font-normal leading-relaxed max-w-xl">
-                Ready to streamline student inquiries, lead assignment, and
-                tele-calling? Talk with our product team to see how EnrollIQ CRM
-                fits your institution.
+                Ready to streamline student inquiries, lead assignment, and tele-calling? Talk with our product team to
+                see how EnrollIQ CRM fits your institution.
               </p>
             </div>
 
@@ -89,8 +176,7 @@ export default function ContactSection() {
                 </div>
 
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed min-h-[36px]">
-                  Schedule a personalized demo or inquire about customized plan
-                  pricing for your counselors.
+                  Schedule a personalized demo or inquire about customized plan pricing for your counselors.
                 </p>
 
                 <div className="space-y-2.5 pt-3 text-xs sm:text-sm font-medium border-t border-slate-100">
@@ -116,8 +202,7 @@ export default function ContactSection() {
                 </div>
 
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed min-h-[36px]">
-                  Existing customer? Get support with system configuration,
-                  integrations, or counselor logins.
+                  Existing customer? Get support with system configuration, integrations, or counselor logins.
                 </p>
 
                 <div className="space-y-2.5 pt-3 text-xs sm:text-sm font-medium border-t border-slate-100">
@@ -159,21 +244,19 @@ export default function ContactSection() {
                   <div className="w-14 h-14 bg-emerald-50 text-emerald-600 border border-emerald-200 rounded-2xl flex items-center justify-center mx-auto shadow-2xs">
                     <CheckCircle2 className="w-8 h-8" />
                   </div>
-                  <h4 className="font-heading font-black text-xl text-[#0F172A]">
-                    Enquiry Received, {name}!
-                  </h4>
+                  <h4 className="font-heading font-black text-xl text-[#0F172A]">Enquiry Received, {name}!</h4>
                   <p className="text-sm text-slate-600 max-w-xs mx-auto">
-                    Thank you for reaching out. An EnrollIQ specialist will
-                    contact you shortly at <strong>{email}</strong>.
+                    Thank you for reaching out. An EnrollIQ specialist will contact you shortly at{' '}
+                    <strong>{email}</strong>.
                   </p>
                   <button
                     type="button"
                     onClick={() => {
                       setIsSubmitted(false);
-                      setName("");
-                      setEmail("");
-                      setPhone("");
-                      setRequirement("");
+                      setName('');
+                      setEmail('');
+                      setPhone('');
+                      setRequirement('');
                     }}
                     className="px-5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs transition-colors cursor-pointer"
                   >
@@ -181,11 +264,7 @@ export default function ContactSection() {
                   </button>
                 </div>
               ) : (
-                <form
-                  onSubmit={handleSubmit}
-                  className="space-y-3.5"
-                  id="contact-sales-form"
-                >
+                <form onSubmit={handleSubmit} className="space-y-3.5" id="contact-sales-form">
                   <div>
                     <input
                       type="text"
@@ -227,50 +306,31 @@ export default function ContactSection() {
 
                   <div className="grid grid-cols-2 gap-2.5">
                     <div>
-                      <label className="block text-[11px] font-bold text-slate-600 mb-1">
-                        Institution Type
-                      </label>
+                      <label className="block text-[11px] font-bold text-slate-600 mb-1">Institution Type</label>
                       <select
                         value={institutionType}
                         onChange={(e) => setInstitutionType(e.target.value)}
                         className="w-full px-3 py-2.5 rounded-xl bg-[#F8FAFC] border border-slate-200 text-slate-800 text-xs focus:outline-none focus:border-indigo-600 focus:bg-white transition-all cursor-pointer"
                       >
-                        <option value="Higher Ed / University">
-                          Higher Ed / University
-                        </option>
-                        <option value="K-12 School Group">
-                          K-12 School Group
-                        </option>
-                        <option value="EdTech / Coaching">
-                          EdTech / Coaching
-                        </option>
-                        <option value="Study Abroad Agency">
-                          Study Abroad Agency
-                        </option>
-                        <option value="Vocational / Skill Center">
-                          Vocational / Skill Center
-                        </option>
+                        <option value="K-12 School Group">K-12 School Group</option>
+                        <option value="E-Tech Coaching">E-Tech Coaching</option>
+                        <option value="HigherEd / University">HigherEd / University</option>
+                        <option value="Study Abroad Agency">Study Abroad Agency</option>
+                        <option value="Vocation / Skill Center">Vocation / Skill Center</option>
+                        <option value="Other">Other</option>
                       </select>
                     </div>
 
                     <div>
-                      <label className="block text-[11px] font-bold text-slate-600 mb-1">
-                        Counselor Team Size
-                      </label>
+                      <label className="block text-[11px] font-bold text-slate-600 mb-1">Counselor Team Size</label>
                       <select
                         value={counselorCount}
                         onChange={(e) => setCounselorCount(e.target.value)}
                         className="w-full px-3 py-2.5 rounded-xl bg-[#F8FAFC] border border-slate-200 text-slate-800 text-xs focus:outline-none focus:border-indigo-600 focus:bg-white transition-all cursor-pointer"
                       >
-                        <option value="1 - 5 Counselors">
-                          1 - 5 Counselors
-                        </option>
-                        <option value="5 - 15 Counselors">
-                          5 - 15 Counselors
-                        </option>
-                        <option value="15 - 50 Counselors">
-                          15 - 50 Counselors
-                        </option>
+                        <option value="1 - 5 Counselors">1 - 5 Counselors</option>
+                        <option value="5 - 15 Counselors">5 - 15 Counselors</option>
+                        <option value="15 - 50 Counselors">15 - 50 Counselors</option>
                         <option value="50+ Counselors">50+ Counselors</option>
                       </select>
                     </div>
@@ -303,9 +363,10 @@ export default function ContactSection() {
                     )}
                   </button>
 
+                  {submitError && <p className="text-xs text-center text-red-600 font-medium pt-1">{submitError}</p>}
+
                   <p className="text-[11px] text-center text-slate-500 pt-1">
-                    🔒 Your information is confidential and will only be used to
-                    respond to your request.
+                    🔒 Your information is confidential and will only be used to respond to your request.
                   </p>
                 </form>
               )}
