@@ -51,15 +51,14 @@ export function HeroSection({ onOpenDemo }: HeroSectionProps) {
 
             {/* 4. CTA Button */}
             <div className="pt-2">
-              <Link
-                href="https://crm.mediagarh.com/CRM/signup"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto px-7 py-3.5 rounded-xl text-base font-bold text-white bg-[#4F46E5] hover:bg-[#4338CA] shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/35 transition-all flex items-center justify-center gap-2.5 transform hover:-translate-y-0.5 cursor-pointer"
-                id="hero-get-started-free-btn"
-              >
-                <span>Get Started</span>
-                <ArrowRight className="w-4 h-4" />
+              <Link href="https://crm.mediagarh.com/CRM/signup" target="_blank" rel="noopener noreferrer">
+                <button
+                  className="w-full sm:w-auto px-7 py-3.5 rounded-xl text-base font-bold text-white bg-[#4F46E5] hover:bg-[#4338CA] shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/35 transition-all flex items-center justify-center gap-2.5 transform hover:-translate-y-0.5 cursor-pointer"
+                  id="hero-get-started-free-btn"
+                >
+                  <span>Get Started</span>
+                  <ArrowRight className="w-4 h-4" />
+                </button>
               </Link>
             </div>
 
