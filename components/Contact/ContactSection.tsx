@@ -44,18 +44,12 @@ export default function ContactSection() {
     const landing_url = window.location.href;
     const referrer_url = document.referrer || '';
 
-    // Split full name into first/last (CRM expects full name in first_name, last word in last_name)
-    const nameParts = name.trim().split(/\s+/);
-    const firstName = name.trim();
-    const lastName = nameParts.length > 1 ? nameParts[nameParts.length - 1] : '';
-
     // Strip non-digits from phone
     const cleanPhone = phone.replace(/\D/g, '');
 
     const payload = {
       form_id: FORM_ID,
-      first_name: firstName,
-      last_name: lastName,
+      first_name: name.trim(),
       email,
       phone: cleanPhone,
       utm_source,
