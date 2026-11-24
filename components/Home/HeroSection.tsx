@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import React from "react";
-import { motion } from "framer-motion";
-import { Sparkles, ArrowRight, Send } from "lucide-react";
-import Link from "next/link";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Sparkles, ArrowRight, Send } from 'lucide-react';
+import Link from 'next/link';
 
 interface HeroSectionProps {
   onOpenDemo: () => void;
@@ -45,24 +45,21 @@ export function HeroSection({ onOpenDemo }: HeroSectionProps) {
 
             {/* 3. Description */}
             <p className="text-base text-slate-600 max-w-lg leading-relaxed font-normal">
-              EnrollIQ helps you engage leads, close deals, and build lasting
-              customer relationships — all in one powerful platform.
+              EnrollIQ helps you engage leads, close deals, and build lasting customer relationships — all in one
+              powerful platform.
             </p>
 
             {/* 4. CTA Button */}
             <div className="pt-2">
               <Link
-                href="https://crm.mediagarh.com/CRM/login"
+                href="https://crm.mediagarh.com/CRM/signup"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="w-full sm:w-auto px-7 py-3.5 rounded-xl text-base font-bold text-white bg-[#4F46E5] hover:bg-[#4338CA] shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/35 transition-all flex items-center justify-center gap-2.5 transform hover:-translate-y-0.5 cursor-pointer"
+                id="hero-get-started-free-btn"
               >
-                <button
-                  className="w-full sm:w-auto px-7 py-3.5 rounded-xl text-base font-bold text-white bg-[#4F46E5] hover:bg-[#4338CA] shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/35 transition-all flex items-center justify-center gap-2.5 transform hover:-translate-y-0.5 cursor-pointer"
-                  id="hero-get-started-free-btn"
-                >
-                  <span>Get Started</span>
-                  <ArrowRight className="w-4 h-4" />
-                </button>
+                <span>Get Started</span>
+                <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
 
@@ -100,11 +97,7 @@ export function HeroSection({ onOpenDemo }: HeroSectionProps) {
             {/* Floating Paper Airplane */}
             <div className="absolute -top-6 right-2 sm:right-6 z-20 animate-bounce [animation-duration:3s]">
               <div className="w-12 h-12 text-[#6366F1] drop-shadow-md">
-                <Send
-                  className="w-10 h-10 text-indigo-600 rotate-12"
-                  strokeWidth={1.8}
-                  fill="none"
-                />
+                <Send className="w-10 h-10 text-indigo-600 rotate-12" strokeWidth={1.8} fill="none" />
               </div>
             </div>
 
