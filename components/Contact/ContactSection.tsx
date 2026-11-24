@@ -49,7 +49,7 @@ export default function ContactSection() {
 
     const payload = {
       form_id: FORM_ID,
-      first_name: name.trim(),
+      first_name: name,
       email,
       phone: cleanPhone,
       utm_source,
