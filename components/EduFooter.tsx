@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import React from "react";
-import Link from "next/link";
-import { motion } from "motion/react";
-import { Mail, MapPin, ArrowUpRight, Sparkles } from "lucide-react";
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'motion/react';
+import { Mail, MapPin, ArrowUpRight, Sparkles } from 'lucide-react';
 
 interface EduFooterProps {
   onOpenDemo?: () => void;
@@ -11,22 +11,20 @@ interface EduFooterProps {
 
 export function EduFooter({ onOpenDemo }: EduFooterProps) {
   const quickLinks = [
-    { name: "About", href: "/about" },
-    { name: "Service", href: "/services" },
-    { name: "Contact", href: "/contact" },
+    { name: 'About', href: '/about' },
+    { name: 'Service', href: '/services' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Download Brochure', href: '/download-brochure' },
   ];
 
   return (
-    <footer
-      className="relative bg-white text-slate-600 border-t border-slate-200/90 overflow-hidden"
-      id="main-footer"
-    >
+    <footer className="relative bg-white text-slate-600 border-t border-slate-200/90 overflow-hidden" id="main-footer">
       {/* Subtle background ambient light */}
       <div
         className="absolute inset-0 opacity-[0.03] pointer-events-none"
         style={{
           backgroundImage: `radial-gradient(#4F46E5 1px, transparent 1px)`,
-          backgroundSize: "24px 24px",
+          backgroundSize: '24px 24px',
         }}
       />
       <div className="absolute top-0 left-1/4 w-96 h-32 bg-indigo-500/5 blur-3xl rounded-full pointer-events-none" />
@@ -43,24 +41,15 @@ export function EduFooter({ onOpenDemo }: EduFooterProps) {
             className="md:col-span-6 space-y-4"
             suppressHydrationWarning
           >
-            <Link
-              href="/"
-              className="flex items-center gap-3 group inline-flex  w-34 flex-shrink-0"
-              id="footer-logo"
-            >
+            <Link href="/" className="flex items-center gap-3 group inline-flex  w-34 flex-shrink-0" id="footer-logo">
               {/* Custom 3-bar funnel logo matching header in light mode */}
-              <img
-                src="/assets/EnrolliqLogo.webp"
-                className="object-cover"
-                alt=""
-              />
+              <img src="/assets/EnrolliqLogo.webp" className="object-cover" alt="" />
             </Link>
 
             <p className="text-sm text-slate-600 leading-relaxed max-w-md">
-              Powering end-to-end enrollment management for modern educational
-              institutions. Capture leads from Meta, Google, and publishers,
-              manage custom forms and workflows, and auto-allocate leads to
-              counselors seamlessly.
+              Powering end-to-end enrollment management for modern educational institutions. Capture leads from Meta,
+              Google, and publishers, manage custom forms and workflows, and auto-allocate leads to counselors
+              seamlessly.
             </p>
           </motion.div>
 
@@ -73,9 +62,7 @@ export function EduFooter({ onOpenDemo }: EduFooterProps) {
             className="md:col-span-3 space-y-4"
             suppressHydrationWarning
           >
-            <h4 className="font-heading font-bold text-base text-[#0F172A] tracking-tight">
-              Quick Links
-            </h4>
+            <h4 className="font-heading font-bold text-base text-[#0F172A] tracking-tight">Quick Links</h4>
             <ul className="space-y-3 text-sm">
               {quickLinks.map((link) => (
                 <li key={link.name}>
@@ -102,9 +89,7 @@ export function EduFooter({ onOpenDemo }: EduFooterProps) {
             className="md:col-span-3 space-y-4"
             suppressHydrationWarning
           >
-            <h4 className="font-heading font-bold text-base text-[#0F172A] tracking-tight">
-              Contact
-            </h4>
+            <h4 className="font-heading font-bold text-base text-[#0F172A] tracking-tight">Contact</h4>
             <div className="space-y-3.5 text-sm">
               <a
                 href="mailto:pranjal@mediagarh.com"
@@ -124,8 +109,7 @@ export function EduFooter({ onOpenDemo }: EduFooterProps) {
                   <MapPin className="w-4 h-4 " />
                 </div>
                 <span className="font-medium text-slate-700">
-                  142, Pal Rd, near Amargarh Resort, Ravi Nagar, Bhadu Market,
-                  Jodhpur, Rajasthan 342001
+                  142, Pal Rd, near Amargarh Resort, Ravi Nagar, Bhadu Market, Jodhpur, Rajasthan 342001
                 </span>
               </div>
               <div className="flex items-center gap-3 text-slate-600 group">
@@ -133,8 +117,8 @@ export function EduFooter({ onOpenDemo }: EduFooterProps) {
                   <MapPin className="w-4 h-4" />
                 </div>
                 <span className="font-medium text-slate-700">
-                  5th Floor, 365 Office Space, 22nd Cross Rd, Garden Layout,
-                  Sector 2, HSR Layout, Bengaluru, Karnataka 560102
+                  5th Floor, 365 Office Space, 22nd Cross Rd, Garden Layout, Sector 2, HSR Layout, Bengaluru, Karnataka
+                  560102
                 </span>
               </div>
             </div>
@@ -146,8 +130,8 @@ export function EduFooter({ onOpenDemo }: EduFooterProps) {
       <div className="relative border-t border-slate-200/90 bg-[#F8FAFC]">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-6 text-center">
           <p className="text-xs sm:text-sm text-slate-500 font-medium tracking-wide">
-            &copy; 2026 ENROLLIQ TECHNOLOGIES PRIVATE LIMITED. All rights
-            reserved. A product of Mediagarh Technosoft Pvt. Ltd.
+            &copy; 2026 ENROLLIQ TECHNOLOGIES PRIVATE LIMITED. All rights reserved. A product of Mediagarh Technosoft
+            Pvt. Ltd.
           </p>
         </div>
       </div>
